@@ -82,20 +82,28 @@ Use this checklist during your evaluation to ensure every feature is working:
 
 - [x] **Routing & Navigation:**
   - [x] Home (`/`) renders hero, stats, dean's message, program cards, and latest news.
-  - [x] About (`/about`) renders history, vision/mission, 6 computing labs, and FAQ accordion.
-  - [x] BSIT (`/programs/bsit`) renders complete 4-year curriculum, objectives, careers, and IT faculty.
-  - [x] BSCS (`/programs/bscs`) renders algorithmic tracks, 4-year curriculum, careers, and CS faculty.
-  - [x] BSDMIA (`/programs/bsdmia`) renders studio labs, 4-year curriculum, careers, and MIDAS guild.
-  - [x] BLIS (`/programs/blis`) renders digital curation tracks, PRC licensure review, and BLIS faculty.
-  - [x] Faculty (`/faculty`) allows live search, category filtering, and program tag filtering.
+  - [x] About (`/about`) renders history, 5-era interactive timeline (1995–Present), vision/mission, 6 computing labs, and FAQ accordion.
+  - [x] BSIT (`/programs/bsit`) renders 161-unit AY 2024–2025 curriculum with DBA & IoT tracks, objectives, careers, and IT faculty.
+  - [x] BSCS (`/programs/bscs`) renders 164-unit AY 2024–2025 curriculum with Software Dev, Data Science, and Cybersecurity tracks.
+  - [x] BSDMIA (`/programs/bsdmia`) renders 164-unit AY 2024–2025 curriculum with Digital Media & Broadcast Design vs. Visualization & Animation track toggles.
+  - [x] BLIS (`/programs/blis`) renders 156-unit AY 2024–2025 curriculum with 400-hour dual practicum and PRC licensure review.
+  - [x] Faculty (`/faculty`) allows live search, category filtering, program tag filtering, and notes dual verification details.
   - [x] News (`/news`) allows category filtering and opens full article reading modal dialogs.
   - [x] Contact (`/contact`) validates inputs in real time and triggers confirmation modal.
   - [x] 404 (`/nonexistent-path`) displays custom branded 404 page with navigation links.
 
+- [x] **Documentation & Audit Compliance:**
+  - [x] `docs/content-audit.md` provides complete matrix of discrepancies, sources, corrections, and uncertainties.
+  - [x] `docs/design-audit.md` details UI/UX defects, impacts, modern solutions, and files affected.
+  - [x] `docs/reference-materials/` contains all 4 signed AY 2024–2025 PDF checklists and reference README.
+  - [x] `docs/project-report.md` updated across all 12 comprehensive sections.
+
 - [x] **User Interactions & State:**
   - [x] Mobile hamburger menu opens and closes off-canvas drawer.
   - [x] Academic Programs dropdown displays 4 degree options with description snippets.
-  - [x] Curriculum tabs (Year 1 to Year 4) switch course listings reactively without page reloads.
+  - [x] CurriculumViewer switches year-levels, semesters, and tracks reactively without page reloads.
+  - [x] Full 4-year curriculum matrix modal displays complete course roadmap.
+  - [x] About page interactive timeline switches between 5 distinct historical eras (1995 to Present).
   - [x] Contact form blocks invalid emails and short inputs, showing clear inline errors.
   - [x] Browser Back & Forward buttons navigate smoothly between views.
   - [x] Page scrolls to top on navigation.
@@ -143,3 +151,4 @@ When presenting to your instructor, structure your demonstration around these th
 
 ---
 *End of Guide.*
+

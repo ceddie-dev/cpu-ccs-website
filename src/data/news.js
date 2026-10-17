@@ -143,3 +143,4 @@ export const newsData = [
     tags: ['Enrollment', 'Laboratory', 'Policies', 'Advisory', 'Students']
   }
 ]
+

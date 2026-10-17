@@ -29,3 +29,4 @@ export const faqData = [
     answer: 'CCS students actively participate in three prominent recognized student organizations: the CPU Computer Science Society (CSS) for BSCS and BSIT students, the Media & Interactive Design Arts Society (MIDAS) for BSDMIA creatives, and the Library & Information Science Student Organization (LISSO) for BLIS scholars.'
   }
 ]
+

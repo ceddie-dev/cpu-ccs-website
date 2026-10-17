@@ -35,7 +35,8 @@ export const facultyData = [
     consultationHours: 'Tuesday & Thursday: 1:00 PM – 4:00 PM',
     bio: 'Oversees the academic and instructional operations of the Information Technology and Information Systems departments, guiding students through practical industry internships and emerging technology capstones.',
     specializations: ['IT Infrastructure Management', 'Systems Integration', 'Enterprise Systems', 'Technology Project Management'],
-    verified: true
+    verified: true,
+    verificationNote: 'Listed as Department Head (IT & IS) on official live website ccs.cpu.edu.ph.'
   },
   {
     id: 'parreno-marjee-rose',
@@ -211,7 +212,8 @@ export const facultyData = [
     consultationHours: 'Tuesday & Thursday: 2:00 PM – 4:30 PM',
     bio: 'Guides students through intelligent algorithms, application programming interfaces, modern software lifecycles, and database engineering.',
     specializations: ['Database Management', 'Software Life Cycle', 'Applied Computing', 'Intelligent Systems'],
-    verified: true
+    verified: true,
+    verificationNote: 'Signed as OIC-Department Head, BSIT on the official AY 2024–2025 Curriculum Checklist; listed as Faculty Member on ccs.cpu.edu.ph.'
   },
   {
     id: 'ador-chriselda',
@@ -278,3 +280,4 @@ export const facultyData = [
     verified: true
   }
 ]
+

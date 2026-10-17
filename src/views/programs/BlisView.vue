@@ -5,11 +5,13 @@ import AppBreadcrumb from '@/components/AppBreadcrumb.vue'
 import SectionHeading from '@/components/SectionHeading.vue'
 import FacultyCard from '@/components/FacultyCard.vue'
 import BaseModal from '@/components/BaseModal.vue'
+import CurriculumViewer from '@/components/CurriculumViewer.vue'
 import { programsData } from '@/data/programs'
 import { facultyData } from '@/data/faculty'
+import { curriculaData } from '@/data/curricula'
 
 const program = programsData.blis
-const activeYearIndex = ref(0)
+const curriculum = curriculaData.blis
 const isBrochureModalOpen = ref(false)
 
 const breadcrumbs = [
@@ -162,51 +164,17 @@ const associatedFaculty = computed(() => {
       </div>
     </section>
 
-    <!-- 4-Year Curriculum Highlights -->
-    <section class="section-padding bg-white">
+    <!-- Official Academic Curriculum (Checklist 2024-2025) -->
+    <section class="section-padding bg-white" id="curriculum">
       <div class="container">
         <SectionHeading
-          badge="Curriculum Roadmap"
-          title="4-Year Curriculum Highlights"
-          subtitle="A structured academic pathway covering descriptive cataloging, digital preservation, database informatics, and intensive licensure board prep."
+          badge="AY 2024–2025 Official Curriculum"
+          title="Curriculum Checklist & Course Matrix"
+          subtitle="Complete course listing extracted directly from the CPU CCS 2024–2025 Academic Checklist signed by the Department Head and Dean (156 Total Academic Units)."
           align="center"
         />
 
-        <div class="curriculum-container">
-          <div class="curriculum-tabs">
-            <button
-              v-for="(yearData, idx) in program.curriculumHighlights"
-              :key="idx"
-              class="year-tab-btn"
-              :class="{ 'tab-active': activeYearIndex === idx }"
-              @click="activeYearIndex = idx"
-            >
-              <span class="tab-year">{{ yearData.year }}</span>
-              <span class="tab-focus">{{ yearData.focus }}</span>
-            </button>
-          </div>
-
-          <div class="curriculum-panel card">
-            <div class="panel-header">
-              <div>
-                <span class="badge badge-navy">Informatics Focus</span>
-                <h3 class="panel-title">{{ program.curriculumHighlights[activeYearIndex].year }}</h3>
-              </div>
-              <p class="panel-desc">{{ program.curriculumHighlights[activeYearIndex].focus }}</p>
-            </div>
-
-            <div class="courses-grid">
-              <div
-                v-for="(course, cIdx) in program.curriculumHighlights[activeYearIndex].courses"
-                :key="cIdx"
-                class="course-item"
-              >
-                <AppIcon name="library" :size="16" class="course-icon" />
-                <span>{{ course }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CurriculumViewer :curriculum="curriculum" />
       </div>
     </section>
 
@@ -298,7 +266,7 @@ const associatedFaculty = computed(() => {
         <div class="prospectus-specifications">
           <div class="spec-row">
             <span>Total Units:</span>
-            <strong>156 Units</strong>
+            <strong>156 Academic Units</strong>
           </div>
           <div class="spec-row">
             <span>Licensure Pathway:</span>
@@ -306,10 +274,10 @@ const associatedFaculty = computed(() => {
           </div>
           <div class="spec-row">
             <span>Archival Practicum:</span>
-            <strong>500+ Hours in Academic / Special Libraries</strong>
+            <strong>400 Hours (200 hrs Academic/School + 200 hrs Public/Special)</strong>
           </div>
           <div class="spec-row">
-            <span>Program Coordinator:</span>
+            <span>Department Head:</span>
             <strong>Prof. Ana Mae B. Cantel, MLIS, RL</strong>
           </div>
         </div>

@@ -58,6 +58,11 @@ defineProps({
           <span>{{ faculty.consultationHours }}</span>
         </div>
       </div>
+
+      <div v-if="faculty.verificationNote" class="verification-note">
+        <AppIcon name="info" :size="13" class="note-icon" />
+        <span>{{ faculty.verificationNote }}</span>
+      </div>
     </div>
 
     <div class="card-action">
@@ -210,6 +215,25 @@ defineProps({
   line-height: 1.4;
 }
 
+.verification-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.35rem;
+  font-size: 0.725rem;
+  color: #854d0e;
+  background-color: #fefce8;
+  border: 1px solid #fef08a;
+  border-radius: var(--radius-xs);
+  padding: 0.4rem 0.6rem;
+  margin-top: 0.6rem;
+  line-height: 1.35;
+}
+
+.note-icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
 .card-action {
   padding: 0.85rem 1.5rem;
   background-color: #f8fafc;
@@ -238,3 +262,4 @@ defineProps({
   border-color: var(--cpu-navy);
 }
 </style>
+

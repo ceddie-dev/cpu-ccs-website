@@ -148,3 +148,4 @@ const emit = defineEmits(['view'])
   transform: translateX(3px);
 }
 </style>
+

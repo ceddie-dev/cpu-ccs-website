@@ -113,8 +113,9 @@ CPU College of Computer Studies Web Portal
 │   └── Admissions Call-to-Action
 │
 ├── /about (About the College)
-│   ├── Heritage & Historical Milestones (1905–Present)
-│   ├── Vision, Mission & Scientia et Fides Philosophy
+│   ├── Heritage & Historical Overview (1905–Present)
+│   ├── Five Decades of Computing Heritage (Interactive 5-Era Timeline 1995–Present)
+│   ├── Vision, Mission, Quality Policy & Scientia et Fides Philosophy
 │   ├── 6 Specialized Computing Laboratories Showcase
 │   ├── Recognized Student Organizations (CSS, MIDAS, LISSO)
 │   └── Interactive FAQ Accordion
@@ -122,8 +123,10 @@ CPU College of Computer Studies Web Portal
 ├── /programs/bsit (Bachelor of Science in Information Technology)
 │   ├── Degree Header, PACUCOA Status & Insignia
 │   ├── Program Overview & CHED CMO 25 Objectives
-│   ├── 4 Specialized Technical Tracks
-│   ├── 4-Year Curriculum Highlights (Interactive Year Tabs)
+│   ├── 4 Specialized Technical Competency Areas
+│   ├── Official AY 2024–2025 Curriculum Matrix (CurriculumViewer: 161 Units)
+│   │   ├── Database Administration Track & Internet of Things (IoT) Track
+│   │   └── Full 4-Year Matrix Modal Dialog
 │   ├── 6 Career Opportunities & Pathways
 │   ├── Verified Associated Faculty Grid
 │   ├── Student Society Banner (CSS)
@@ -133,7 +136,9 @@ CPU College of Computer Studies Web Portal
 │   ├── Theoretical & Algorithmic Computing Overview
 │   ├── Program Objectives & Mathematical Foundations
 │   ├── 4 Specialized Computing Domains
-│   ├── 4-Year Curriculum Highlights (Year 1 to Year 4)
+│   ├── Official AY 2024–2025 Curriculum Matrix (CurriculumViewer: 164 Units)
+│   │   ├── Software Development, Data Science & Cybersecurity Tracks
+│   │   └── Full 4-Year Matrix Modal Dialog
 │   ├── Career Opportunities in AI, Systems & Software
 │   ├── Verified Associated Faculty Grid
 │   ├── Competitive Programming & SEntralians Banner
@@ -143,7 +148,9 @@ CPU College of Computer Studies Web Portal
 │   ├── Digital Arts & Game Production Overview
 │   ├── Program Objectives & Studio Standards
 │   ├── 4 Creative Specialization Domains
-│   ├── 4-Year Studio Curriculum Highlights
+│   ├── Official AY 2024–2025 Curriculum Matrix (CurriculumViewer: 164 Units)
+│   │   ├── Dual Track Toggle (Digital Media & Broadcast Design vs. Visualization & Animation)
+│   │   └── Full 4-Year Studio Matrix Modal Dialog
 │   ├── Animation, VFX & Game Design Career Pathways
 │   ├── Verified Associated Faculty Grid
 │   ├── Creative Community Feature (MIDAS)
@@ -153,7 +160,9 @@ CPU College of Computer Studies Web Portal
 │   ├── Digital Informatics & Archiving Overview
 │   ├── PRC Board Licensure for Librarians Alignment
 │   ├── 4 Specialized Archival & Metadata Tracks
-│   ├── 4-Year Curriculum Roadmap & Licensure Review
+│   ├── Official AY 2024–2025 Curriculum Matrix (CurriculumViewer: 156 Units)
+│   │   ├── 400 Hours Dual Practicum & PRC Licensure Review Course
+│   │   └── Full 4-Year Matrix Modal Dialog
 │   ├── Modern Knowledge Management Careers
 │   ├── Verified Associated Faculty Grid
 │   ├── Literacy & Service Guild (LISSO)
@@ -198,16 +207,31 @@ CPU College of Computer Studies Web Portal
 * **Latest News Preview:** Displays three real-world news stories with an interactive reading modal.
 
 ### 6.2 About the College (`/about`)
-* **Heritage Narrative:** Details CPU's founding in 1905 and the growth of computer studies in Western Visayas.
-* **Vision & Mission Statements:** Exact official statements for both Central Philippine University and the College of Computer Studies.
-* **Specialized Laboratories:** Cards for Apple Mac Lab, Cisco Networking Lab, VR Simulation Studio, Cloud Lab, Hardware Diagnostics Room, and Digital Library Hub.
+* **Heritage Narrative:** Details CPU's founding in 1905, the university motto *Scientia et Fides*, and the institutional commitment to exemplary Christian education.
+* **Five Decades of Computing Heritage (Interactive 5-Era Timeline):** Features an interactive chronological timeline covering:
+  - Era 1 (1995–2000): Early Inception in Mary Thomas Building under the College of Engineering (Prof. Penetrante).
+  - Era 2 (2001–2007): Board of Trustees grants independence; College of Computer Studies chartered under Engr. Alberto A. Calibjo; launch of BSIT & BSIS.
+  - Era 3 (2008–2013): Professionalization under Dean Prof. Gicana; initial PAASCU survey visits.
+  - Era 4 (2014–2019): Launch of BSDMIA (2014); PAASCU Level I Accreditation (2015); BLIS formal transfer into CCS (2018); clean 5-year PAASCU re-accreditation (2019); PACUCOA orientation for BLIS.
+  - Era 5 (2020–Present): Dean Prof. Ma. Christina A. Quijano, MSCS leads digital learning resilience, iMac lab modernization, and complete AY 2024–2025 OBE curriculum overhaul.
+* **Live-Verified Vision, Mission & Quality Policy:** Exact official statements retrieved from `https://ccs.cpu.edu.ph/vision-and-mission/` and CPU central quality manual.
+* **Specialized Laboratories:** High-tech facilities showcase: Apple Macintosh Multimedia Lab, Cisco Networking & Security Lab, VR Simulation Studio, Cloud Virtualization Lab, Hardware Diagnostics Room, and Digital Library Informatics Hub.
 * **Student Organizations:** Profiles for CSS, MIDAS, and LISSO with official insignias.
 * **FAQ Accordion:** Interactive accordion addressing admissions, accreditation, facilities, scholarships, and licensure exams.
 
 ### 6.3 Academic Program Pages (`/programs/bsit`, `/programs/bscs`, `/programs/bsdmia`, `/programs/blis`)
-* **Program Header:** Program emblem (`/assets/program-icons/...`), accreditation badge, degree duration, and quick facts.
-* **Outcomes-Based Education (OBE):** CHED CMO 25 Series of 2015 educational objectives and student outcomes.
-* **Curriculum Highlights:** Four interactive year tabs allowing users to explore major course titles for First Year, Second Year, Third Year, and Fourth Year.
+* **Program Header:** Program emblem (`/assets/program-icons/...`), accreditation badge, degree duration, department head identification, and quick facts.
+* **Outcomes-Based Education (OBE):** CHED CMO 25 s.2015 / CMO 10 s.2017 educational objectives and student outcomes.
+* **Areas of Study & Technical Competencies:** 4 in-depth domain pillars for each degree program.
+* **Interactive Curriculum Matrix (`CurriculumViewer.vue`):**
+  - Live data from `src/data/curricula.js` extracted from the 4 official 2024 signed checklists.
+  - Interactive Year-Level tabs (First Year to Fourth Year) and Semester selectors (First Sem, Second Sem, Summer).
+  - Subject code badges, lecture and lab hour distributions, credit units, prerequisites, and co-requisites.
+  - **BSIT (161 Units):** Database Administration Track vs. Internet of Things (IoT) Track.
+  - **BSCS (164 Units):** Software Development, Data Science, and Cybersecurity Tracks.
+  - **BSDMIA (164 Units):** Digital Media & Broadcast Design Track vs. Visualization & Animation Track toggles for Third Year.
+  - **BLIS (156 Units):** 400-hour dual practicum breakdown and PRC Licensure Examination Review modules.
+  - **Full 4-Year Matrix Modal Dialog:** Provides an expansive modal table enabling advisors and students to review the complete multi-year roadmap in one view.
 * **Career Pathways:** Grid of career opportunity cards detailing job roles, industry sectors, and workplace descriptions.
 * **Verified Faculty Roster:** Dynamically filtered `FacultyCard.vue` components displaying only the instructors associated with that specific degree.
 * **Curriculum Prospectus Modal:** Interactive download simulation displaying credit units and course requirements with academic project disclosures.
@@ -256,11 +280,20 @@ CPU College of Computer Studies Web Portal
 ```text
 CPU College of Computer Studies/
 ├── docs/
-│   └── project-report.md           # 12-Section Comprehensive Project Report
+│   ├── content-audit.md            # Comprehensive Academic & Faculty Content Audit Matrix
+│   ├── design-audit.md             # UI/UX & Design System Audit Matrix
+│   ├── project-report.md           # 12-Section Comprehensive Examination Project Report
+│   ├── submission-guide.md         # Deployment & Submission Instructions
+│   └── reference-materials/        # Official AY 2024–2025 Checklists (PDFs & Documentation)
+│       ├── BLIS-Curriculum-Checklist-2024.pdf
+│       ├── BSCS-Curriculum-Checklist-2024.pdf
+│       ├── BSIT-Curriculum-Checklist-2024.pdf
+│       ├── DMIA-Curriculum-Checklist-2024.pdf
+│       └── README.md
 ├── public/
 │   ├── _redirects                  # Netlify SPA redirect rule
 │   ├── assets/
-│   │   ├── faculty/                # 17 Authentic Faculty & Staff Photographs
+│   │   ├── faculty/                # Authentic Faculty & Staff Photographs
 │   │   ├── logos/                  # CPU & CCS Official Logos
 │   │   └── program-icons/          # Official Academic Program Insignia
 │   └── favicon.ico
@@ -269,20 +302,22 @@ CPU College of Computer Studies/
 │   │   └── styles/
 │   │       └── main.css            # Global CSS Design System & Theme Tokens
 │   ├── components/
+│   │   ├── AppBreadcrumb.vue       # Accessible Breadcrumb Navigation Trail
 │   │   ├── AppFooter.vue           # 4-Column Footer with Accreditation Badges
 │   │   ├── AppIcon.vue             # Lightweight Reusable SVG Icon Helper
 │   │   ├── AppNavbar.vue           # Sticky Header with Programs Dropdown & Mobile Drawer
 │   │   ├── BaseModal.vue           # Accessible Modal Component (ESC key, Teleport)
-│   │   ├── Breadcrumb.vue          # Accessible Breadcrumb Navigation Trail
+│   │   ├── CurriculumViewer.vue    # Interactive 4-Year OBE Curriculum Matrix Component
 │   │   ├── FacultyCard.vue         # Verified Staff Portrait Card
 │   │   ├── NewsCard.vue            # Filterable News Article Card
 │   │   ├── ProgramCard.vue         # Academic Degree Showcase Card
 │   │   └── SectionHeading.vue      # Standardized Heading with Badges & Accents
 │   ├── data/
-│   │   ├── faculty.js              # 17 Verified Faculty & Staff Records
+│   │   ├── curricula.js            # Complete AY 2024–2025 Curricula Dataset (4 Programs)
+│   │   ├── faculty.js              # Verified Faculty & Staff Records with Verification Notes
 │   │   ├── faq.js                  # Frequently Asked Questions Data
 │   │   ├── news.js                 # Genuine CPU CCS News & Milestones Data
-│   │   └── programs.js             # Detailed Curriculum & Career Data for 4 Degrees
+│   │   └── programs.js             # Degree Overviews, Competencies & Objectives
 │   ├── router/
 │   │   └── index.js                # Vue Router 4 Configuration (10 Routes + SEO Titles)
 │   ├── views/
@@ -291,8 +326,8 @@ CPU College of Computer Studies/
 │   │   │   ├── BsCsView.vue        # BS Computer Science View
 │   │   │   ├── BsDmiaView.vue      # BS Digital Media & Interactive Arts View
 │   │   │   └── BsItView.vue        # BS Information Technology View
-│   │   ├── AboutView.vue           # About College, Labs & Heritage View
-│   │   ├── ContactView.vue         # Contact Form & Directory View
+│   │   ├── AboutView.vue           # About College, 5-Era Timeline & Laboratories
+│   │   ├── ContactView.vue         # Validated Contact Form & Directory View
 │   │   ├── FacultyView.vue         # Interactive Faculty Directory View
 │   │   ├── HomeView.vue            # Modernized Homepage Portal View
 │   │   ├── NewsView.vue            # News, Events & Announcements View
@@ -441,11 +476,21 @@ Future enhancements may integrate headless Content Management Systems (CMS) or b
    *Memorandum Order No. 25, Series of 2015: Revised Policies, Standards, and Guidelines for Bachelor of Science in Computer Science (BSCS), Bachelor of Science in Information Systems (BSIS), and Bachelor of Science in Information Technology (BSIT) Programs.*
 4. **Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA)**  
    *Accreditation Standards and Guidelines for Higher Education Computing Programs.*
-5. **Vue.js 3 Official Documentation**  
+5. **Commission on Higher Education (CHED)**  
+   *Memorandum Order No. 10, Series of 2017: Policies, Standards, and Guidelines for Bachelor of Library and Information Science (BLIS) Program.*
+6. **Central Philippine University — College of Computer Studies Official Curricula (AY 2024–2025)**  
+   - *BSIT Curriculum Checklist 2024–2025* (Revision 12 on CHED CMO 25 s.2015; 161 Total Academic Units)
+   - *BSCS Curriculum Checklist 2024–2025* (Revision 12 on CHED CMO 25 s.2015; 164 Total Academic Units)
+   - *DMIA Curriculum Checklist 2024–2025* (Digital Media & Interactive Arts; 164 Total Academic Units)
+   - *BLIS Curriculum Checklist 2024–2025* (CHED CMO 10 s.2017 & PRC Licensure; 156 Total Academic Units)
+7. **CPU College of Computer Studies Examination Project Audits**  
+   - `docs/content-audit.md`: Academic & Faculty Content Audit Matrix
+   - `docs/design-audit.md`: UI/UX & Design System Audit Matrix
+8. **Vue.js 3 Official Documentation**  
    Evan You and the Vue Core Team. URL: `https://vuejs.org/`
-6. **Vue Router 4 Documentation**  
+9. **Vue Router 4 Documentation**  
    URL: `https://router.vuejs.org/`
-7. **Vite Frontend Tooling Guide**  
+10. **Vite Frontend Tooling Guide**  
    URL: `https://vite.dev/`
 
 ---
@@ -474,3 +519,4 @@ Contribution %:     [Insert % e.g., 50%]
 
 ---
 *End of Documentation Report.*
+

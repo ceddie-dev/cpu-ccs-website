@@ -6,6 +6,7 @@ import SectionHeading from '@/components/SectionHeading.vue'
 import { faqData } from '@/data/faq'
 
 const activeFaqIndex = ref(null)
+const selectedEra = ref(0)
 
 const toggleFaq = (index) => {
   activeFaqIndex.value = activeFaqIndex.value === index ? null : index
@@ -13,6 +14,114 @@ const toggleFaq = (index) => {
 
 const breadcrumbs = [
   { label: 'About the College' }
+]
+
+const historyEras = [
+  {
+    id: 'era-1',
+    era: '1995–2000',
+    title: 'Foundations & Early Inception',
+    subtitle: 'Beginnings under the College of Engineering',
+    summary: 'The birth of computer education at CPU, starting from foundational microcomputer labs in the historic Mary Thomas Building.',
+    milestones: [
+      {
+        year: '1995',
+        title: 'Establishment of Computer Studies Department',
+        description: 'Established under the CPU College of Engineering, admitting its pioneer batch of Bachelor of Science in Computer Science (BSCS) students. Early instruction was hosted in the historic Mary Thomas Building.'
+      },
+      {
+        year: '1998',
+        title: 'Microcomputing Laboratory Expansion',
+        description: 'Under early computing pioneers led by Prof. Penetrante, computing facilities expanded to incorporate dedicated microcomputer labs and foundational algorithmic programming courses.'
+      }
+    ]
+  },
+  {
+    id: 'era-2',
+    era: '2001–2007',
+    title: 'Independence & College Establishment',
+    subtitle: 'Chartering the autonomous College of Computer Studies',
+    summary: 'Evolution from a departmental unit to an independent college under Engr. Alberto A. Calibjo, expanding into IT and Information Systems.',
+    milestones: [
+      {
+        year: 'March 2001',
+        title: 'CPU Board of Trustees Grants Independence',
+        description: 'The CPU Board of Trustees officially authorized the separation and establishment of the independent College of Computer Studies (CCS). Engr. Alberto A. Calibjo served as pioneering College Dean, with offices and labs moving to the new Engineering & Computer Studies wing.'
+      },
+      {
+        year: '2002–2004',
+        title: 'Launch of BSIT and BSIS Degree Programs',
+        description: 'To meet the surge of the global dot-com and enterprise networking economy, the college launched the Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Information Systems (BSIS).'
+      }
+    ]
+  },
+  {
+    id: 'era-3',
+    era: '2008–2013',
+    title: 'Quality Standardization & Initial Surveys',
+    subtitle: 'Professionalization and external accreditation groundwork',
+    summary: 'Transition of academic deanship under Prof. Gicana, rigorous laboratory modernizations, and initial PAASCU survey visits.',
+    milestones: [
+      {
+        year: '2008–2010',
+        title: 'Academic Restructuring & Laboratory Upgrades',
+        description: 'Under the leadership of Dean Prof. Gicana, modern computer laboratories were fitted with structured network cabling, dedicated database servers, and specialized software development suites.'
+      },
+      {
+        year: '2011',
+        title: 'PAASCU Preliminary Accreditation Survey',
+        description: 'The Philippine Accrediting Association of Schools, Colleges and Universities (PAASCU) conducted an initial institutional survey for BSCS and BSIT, affirming curriculum rigor and institutional commitment.'
+      }
+    ]
+  },
+  {
+    id: 'era-4',
+    era: '2014–2019',
+    title: 'Accreditation, Creative Arts & BLIS Transfer',
+    subtitle: 'Expansion into digital multimedia and library informatics',
+    summary: 'A transformative era marked by the launch of BSDMIA, PAASCU Level I and clean 5-year re-accreditations, and the integration of BLIS into CCS.',
+    milestones: [
+      {
+        year: '2014',
+        title: 'Pioneering BSDMIA Program Launch',
+        description: 'Introduced the Bachelor of Science in Digital Media and Interactive Arts (BSDMIA), making CPU one of the first institutions in Panay to offer specialized degrees in game design and animation.'
+      },
+      {
+        year: '2015',
+        title: 'PAASCU Level I Accreditation Conferred',
+        description: 'BSCS, BSIT, and BSIS achieved formal PAASCU Level I Accredited status in recognition of high instructional quality, faculty research, and library resources.'
+      },
+      {
+        year: '2018',
+        title: 'BLIS Transfer to College of Computer Studies',
+        description: 'The Bachelor of Library and Information Science (BLIS) was formally integrated from the College of Arts and Sciences into CCS, unifying modern digital archives, metadata informatics, and library systems.'
+      },
+      {
+        year: '2019',
+        title: 'PAASCU 5-Year Re-Accreditation & PACUCOA Orientation',
+        description: 'BSCS, BSIT, and BSIS earned clean 5-year PAASCU re-accreditation. In October 2019, PACUCOA conducted an official orientation and consultancy visit for the BLIS program.'
+      }
+    ]
+  },
+  {
+    id: 'era-5',
+    era: '2020–Present',
+    title: 'Digital Resilience & OBE 2024 Overhaul',
+    subtitle: 'Modern hybrid learning and latest curriculum revision',
+    summary: 'Dean Prof. Ma. Christina A. Quijano, MSCS leads the college through modern digital transformation and comprehensive AY 2024–2025 curriculum overhauls.',
+    milestones: [
+      {
+        year: '2020–2023',
+        title: 'Leadership of Dean Quijano & Hybrid Innovation',
+        description: 'Dean Prof. Ma. Christina A. Quijano, MSCS steered the college through pandemic-era digital transformation with advanced LMS platforms, virtualized labs, and flexible learning setups.'
+      },
+      {
+        year: '2024–2025',
+        title: 'Complete AY 2024–2025 Curriculum Overhaul',
+        description: 'Comprehensive curriculum revisions officially approved: BSIT (161 units with DBA & IoT electives), BSCS (164 units with Software Dev, Data Science, and Cybersecurity electives), BSDMIA (164 units with Digital Media & Broadcast Design vs. Visualization & Animation tracks), and BLIS (156 units with intensive board exam review and 400 hours dual practicum).'
+      }
+    ]
+  }
 ]
 
 const facilities = [
@@ -126,7 +235,7 @@ const studentOrganizations = [
             </p>
 
             <p>
-              Today, the college holds prestigious <strong>PACUCOA Level III Re-Accreditation</strong>, a testament to its modern outcome-based curricula, world-class computer laboratories, faculty credentials, and award-winning student researchers.
+              Today, the college honors a long tradition of academic excellence, having achieved <strong>PAASCU Level I</strong> and <strong>Clean 5-Year Re-Accreditation</strong> milestones, <strong>PACUCOA Level III</strong> status for its computing programs, and full alignment with CHED CMO 25 s.2015 Outcomes-Based Education standards.
             </p>
 
             <div class="stats-ribbon">
@@ -135,12 +244,12 @@ const studentOrganizations = [
                 <span>CPU Founded</span>
               </div>
               <div class="s-ribbon-item">
-                <strong>Level III</strong>
-                <span>PACUCOA Accredited</span>
+                <strong>1995</strong>
+                <span>Computing Inception</span>
               </div>
               <div class="s-ribbon-item">
                 <strong>4</strong>
-                <span>Distinct Degrees</span>
+                <span>Degree Programs</span>
               </div>
               <div class="s-ribbon-item">
                 <strong>100%</strong>
@@ -153,10 +262,10 @@ const studentOrganizations = [
             <div class="quote-card card">
               <div class="quote-badge">
                 <AppIcon name="award" :size="20" class="gold-icon" />
-                <span>Institutional Quality Policy</span>
+                <span>CPU Institutional Quality Policy</span>
               </div>
               <p class="quote-statement">
-                "To fulfill the mission and realize the vision of Central Philippine University, we commit to consistently provide quality education that develops students' spiritual, intellectual, moral, and technological competencies."
+                "Central Philippine University is committed to provide holistic, exemplary Christian education for life (EXCEL) through relevant academic programs, spiritual growth, dynamic research, and sustainable community engagement to satisfy customer expectations and continually improve the quality management system."
               </p>
               <div class="quote-meta">
                 <strong>Central Philippine University</strong>
@@ -187,7 +296,7 @@ const studentOrganizations = [
               <h3>CCS Vision</h3>
             </div>
             <p>
-              "A College of the future with a mission to educate students with the Christian principles and practices of computer studies, preparing them for advanced studies, careers in software development, computing systems technology, information management, and for lifelong learning."
+              "The College of Computer Studies envisions itself to be a premier provider of computing and information education, producing graduates of high academic competence and Christian character, who will be responsive to the challenges of global and national development."
             </p>
           </div>
 
@@ -196,10 +305,10 @@ const studentOrganizations = [
               <div class="vm-icon-box">
                 <AppIcon name="academic" :size="26" />
               </div>
-              <h3>University Mission</h3>
+              <h3>CCS Mission</h3>
             </div>
             <p>
-              "The mission of Central Philippine University is to carry out a program of spiritual, intellectual, moral, physical, scientific, technological, and cultural training under influences which strengthen Christian faith, build up character, and promote scholarship, research, and community service."
+              "The College of Computer Studies is committed to providing quality education in computing and information technology in a Christian environment, producing competent professionals who are socially responsible and spiritually mature."
             </p>
           </div>
 
@@ -211,8 +320,70 @@ const studentOrganizations = [
               <h3>Scientia et Fides</h3>
             </div>
             <p>
-              <strong>Science and Faith:</strong> We believe true technological brilliance must be guided by Christian ethics, empathy, and moral responsibility. Our graduates balance algorithmic precision with profound compassion for humanity.
+              <strong>Science and Faith:</strong> Grounded in the central university motto and core Christian values: <em>Faith, Character, Justice, Truth, and Excellence</em>. Our technologists balance algorithmic power with compassionate ethics and social responsibility.
             </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chronological History Timeline (1995 to Present) -->
+    <section class="section-padding bg-white" id="timeline">
+      <div class="container">
+        <SectionHeading
+          badge="Chronological Heritage"
+          title="Five Decades of Computing Heritage (1995–Present)"
+          subtitle="A chronological journey through the pivotal eras, pioneering deans, academic milestones, and accreditations that built the College of Computer Studies."
+          align="center"
+        />
+
+        <!-- Era Selector Tabs -->
+        <div class="timeline-era-tabs" role="tablist" aria-label="History Eras">
+          <button
+            v-for="(eraItem, idx) in historyEras"
+            :key="eraItem.id"
+            class="era-tab-btn"
+            :class="{ 'era-active': selectedEra === idx }"
+            role="tab"
+            :aria-selected="selectedEra === idx"
+            @click="selectedEra = idx"
+          >
+            <span class="era-badge">{{ eraItem.era }}</span>
+            <span class="era-title">{{ eraItem.title }}</span>
+          </button>
+        </div>
+
+        <!-- Active Era Content -->
+        <div class="era-detail-container card">
+          <div class="era-header-banner">
+            <div class="era-banner-left">
+              <span class="badge badge-gold">{{ historyEras[selectedEra].era }}</span>
+              <h3 class="era-main-title">{{ historyEras[selectedEra].title }}</h3>
+              <p class="era-main-subtitle">{{ historyEras[selectedEra].subtitle }}</p>
+            </div>
+            <div class="era-banner-right">
+              <p class="era-summary">{{ historyEras[selectedEra].summary }}</p>
+            </div>
+          </div>
+
+          <!-- Milestones Track -->
+          <div class="timeline-milestones-track">
+            <div
+              v-for="(milestone, mIdx) in historyEras[selectedEra].milestones"
+              :key="mIdx"
+              class="milestone-item"
+            >
+              <div class="milestone-node">
+                <div class="milestone-dot">
+                  <AppIcon name="award" :size="16" class="gold-icon" />
+                </div>
+                <span class="milestone-year">{{ milestone.year }}</span>
+              </div>
+              <div class="milestone-card">
+                <h4 class="milestone-title">{{ milestone.title }}</h4>
+                <p class="milestone-desc">{{ milestone.description }}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -592,6 +763,171 @@ const studentOrganizations = [
   margin: 0;
 }
 
+/* History Timeline */
+.timeline-era-tabs {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  margin-bottom: 2rem;
+  scrollbar-width: thin;
+}
+
+.era-tab-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  padding: 0.875rem 1.25rem;
+  background-color: var(--bg-white);
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.era-tab-btn:hover {
+  border-color: var(--cpu-navy);
+  background-color: var(--cpu-navy-soft);
+}
+
+.era-tab-btn.era-active {
+  background-color: var(--cpu-navy);
+  border-color: var(--cpu-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.era-tab-btn .era-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--cpu-gold);
+  letter-spacing: 0.04em;
+}
+
+.era-tab-btn.era-active .era-badge {
+  color: var(--cpu-gold);
+}
+
+.era-tab-btn .era-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.era-tab-btn.era-active .era-title {
+  color: #ffffff;
+}
+
+.era-detail-container {
+  padding: 2.25rem;
+  border-top: 4px solid var(--cpu-gold);
+}
+
+.era-header-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.era-main-title {
+  font-size: 1.5rem;
+  color: var(--cpu-navy);
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 800;
+}
+
+.era-main-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.era-summary {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  margin: 0;
+  padding-left: 1.25rem;
+  border-left: 3px solid var(--cpu-gold);
+}
+
+.timeline-milestones-track {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  padding-left: 0.5rem;
+}
+
+.milestone-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.5rem;
+  align-items: flex-start;
+  position: relative;
+}
+
+.milestone-node {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.milestone-dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: var(--cpu-navy-soft);
+  border: 2px solid var(--cpu-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.milestone-year {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--cpu-navy);
+  letter-spacing: 0.02em;
+}
+
+.milestone-card {
+  background-color: var(--bg-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--border-light);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.milestone-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-color);
+}
+
+.milestone-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--cpu-navy);
+  margin-bottom: 0.4rem;
+}
+
+.milestone-desc {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* FAQ */
 .faq-accordion {
   display: flex;
@@ -647,6 +983,14 @@ const studentOrganizations = [
   }
   .stats-ribbon {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .era-header-banner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .milestone-item {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 }
 </style>

@@ -5,11 +5,13 @@ import AppBreadcrumb from '@/components/AppBreadcrumb.vue'
 import SectionHeading from '@/components/SectionHeading.vue'
 import FacultyCard from '@/components/FacultyCard.vue'
 import BaseModal from '@/components/BaseModal.vue'
+import CurriculumViewer from '@/components/CurriculumViewer.vue'
 import { programsData } from '@/data/programs'
 import { facultyData } from '@/data/faculty'
+import { curriculaData } from '@/data/curricula'
 
 const program = programsData.bsit
-const activeYearIndex = ref(0)
+const curriculum = curriculaData.bsit
 const isBrochureModalOpen = ref(false)
 
 const breadcrumbs = [
@@ -162,53 +164,17 @@ const associatedFaculty = computed(() => {
       </div>
     </section>
 
-    <!-- 4-Year Curriculum Highlights -->
-    <section class="section-padding bg-white">
+    <!-- Official Academic Curriculum (Checklist 2024-2025) -->
+    <section class="section-padding bg-white" id="curriculum">
       <div class="container">
         <SectionHeading
-          badge="Course Roadmap"
-          title="4-Year Curriculum Highlights"
-          subtitle="A progressive, Outcomes-Based Education (OBE) curriculum designed to take you from foundational programming to enterprise deployment."
+          badge="AY 2024–2025 Official Curriculum"
+          title="Curriculum Checklist & Course Matrix"
+          subtitle="Complete course listing extracted directly from the CPU CCS 2024–2025 Academic Checklist signed by the Department Head and Dean (161 Total Academic Units)."
           align="center"
         />
 
-        <div class="curriculum-container">
-          <!-- Year Tabs -->
-          <div class="curriculum-tabs">
-            <button
-              v-for="(yearData, idx) in program.curriculumHighlights"
-              :key="idx"
-              class="year-tab-btn"
-              :class="{ 'tab-active': activeYearIndex === idx }"
-              @click="activeYearIndex = idx"
-            >
-              <span class="tab-year">{{ yearData.year }}</span>
-              <span class="tab-focus">{{ yearData.focus }}</span>
-            </button>
-          </div>
-
-          <!-- Tab Content Panel -->
-          <div class="curriculum-panel card">
-            <div class="panel-header">
-              <div>
-                <span class="badge badge-navy">Academic Focus</span>
-                <h3 class="panel-title">{{ program.curriculumHighlights[activeYearIndex].year }}</h3>
-              </div>
-              <p class="panel-desc">{{ program.curriculumHighlights[activeYearIndex].focus }}</p>
-            </div>
-
-            <div class="courses-grid">
-              <div
-                v-for="(course, cIdx) in program.curriculumHighlights[activeYearIndex].courses"
-                :key="cIdx"
-                class="course-item"
-              >
-                <AppIcon name="book" :size="16" class="course-icon" />
-                <span>{{ course }}</span>
-              </div>
-            </div>
-          </div>
-        </div>
+        <CurriculumViewer :curriculum="curriculum" />
       </div>
     </section>
 
@@ -294,13 +260,17 @@ const associatedFaculty = computed(() => {
 
         <h4>Prospectus Summary</h4>
         <p>
-          This official curriculum guide outlines course prerequisites, laboratory hour allocations, capstone milestones, and total academic units required for graduation (156 units).
+          This official curriculum guide outlines course prerequisites, laboratory hour allocations, capstone milestones, and total academic units required for graduation (161 academic units).
         </p>
 
         <div class="prospectus-specifications">
           <div class="spec-row">
             <span>Total Credit Units:</span>
-            <strong>156 Units</strong>
+            <strong>161 Academic Units</strong>
+          </div>
+          <div class="spec-row">
+            <span>Curriculum Revision:</span>
+            <strong>Revision No. 12 (CHED CMO 25 s.2015)</strong>
           </div>
           <div class="spec-row">
             <span>Practicum / Internship:</span>
@@ -312,7 +282,7 @@ const associatedFaculty = computed(() => {
           </div>
           <div class="spec-row">
             <span>Department:</span>
-            <strong>Information Technology & Information Systems</strong>
+            <strong>Information Technology</strong>
           </div>
         </div>
 
