@@ -273,15 +273,15 @@ const associatedFaculty = computed(() => {
             <strong>Digital Media & Broadcast Design / Visualization & Animation</strong>
           </div>
           <div class="spec-row">
-            <span>Studio Capstone:</span>
-            <strong>2-Semester Playable Game / Animated Short Film</strong>
+            <span>Portfolio Development:</span>
+            <strong>2-Semester Portfolio Sequence (DMIA 3200 & DMIA 4100)</strong>
           </div>
           <div class="spec-row">
-            <span>Internship Placement:</span>
-            <strong>500+ Hours in Animation or Game Studio</strong>
+            <span>Industry Practicum:</span>
+            <strong>600 Hours (CCS 4201 - On-the-Job Training)</strong>
           </div>
           <div class="spec-row">
-            <span>Department Head:</span>
+            <span>Program Coordinator:</span>
             <strong>Prof. Marjee Rose B. Parreño, MSCS, MBA</strong>
           </div>
         </div>
@@ -534,7 +534,8 @@ const associatedFaculty = computed(() => {
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: rgba(0, 33, 71, 0.15);
+  color: var(--cpu-gold);
+  opacity: 1;
   margin-bottom: 0.75rem;
 }
 

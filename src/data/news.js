@@ -69,29 +69,29 @@ export const newsData = [
     tags: ['Outreach', 'MIDAS', 'BSDMIA', 'Community Extension', 'Digital Arts']
   },
   {
-    id: 'pacucoa-level-3-reaccreditation-milestone',
-    title: 'PACUCOA Grants Level III Re-Accreditation to CPU CCS Computing Programs',
+    id: 'ay-2024-2025-curriculum-checklists-approved',
+    title: 'CPU CCS Implements Updated AY 2024–2025 Outcomes-Based Curriculum Checklists',
     category: 'Announcements',
     badgeClass: 'badge-navy',
-    date: 'January 15, 2026',
+    date: 'August 12, 2024',
     author: 'Office of the Dean, CCS',
     image: '/assets/logos/ccs-logo.png',
     readTime: '3 min read',
-    summary: 'The Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA) has reaffirmed Level III Re-Accredited Status for the College of Computer Studies computing degree programs.',
+    summary: 'The College of Computer Studies has officially implemented updated curriculum checklists across all four undergraduate degree programs (BSIT, BSCS, BSDMIA, and BLIS) aligned with CHED CMO standards and modern industry specializations.',
     content: `
-      <p>The College of Computer Studies at Central Philippine University has officially received formal notification from the <strong>Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA)</strong> reaffirming <strong>Level III Re-Accredited Status</strong> for its undergraduate computing programs.</p>
+      <p>The College of Computer Studies at Central Philippine University has officially implemented updated <strong>Academic Year 2024–2025 Curriculum Checklists</strong> across all four of its undergraduate degree programs.</p>
       
-      <p>This distinguished accreditation milestone validates the college’s sustained commitment to:</p>
+      <p>The updated checklists, compliant with Commission on Higher Education (CHED) Memorandum Orders (CMO No. 25, s. 2015 for computing programs and CMO No. 24, s. 2015 for BLIS), feature specialized track pathways designed for modern industry relevance:</p>
       <ul>
-        <li>Excellence in instruction, curriculum modernization, and outcomes-based education (OBE);</li>
-        <li>State-of-the-art laboratory facilities, virtualization nodes, and network switches;</li>
-        <li>Substantial research production, peer-reviewed faculty publications, and student capstones;</li>
-        <li>Vibrant community extension projects and responsive industry internship linkages.</li>
+        <li><strong>BSIT (161 Units):</strong> Specialized elective tracks in Database Administration (CCSPE series) and Internet of Things (ITPE series), supported by a 600-hour on-the-job training (CCS 4201);</li>
+        <li><strong>BSCS (164 Units):</strong> Advanced specialization pathways in Software Development, Data Science, and Cybersecurity (CSPE series), with rigorous algorithmic thesis sequences and 600-hour OJT;</li>
+        <li><strong>BSDMIA (164 Units):</strong> Distinct third-year studio tracks in Digital Media & Broadcast Design (DMBD) and Visualization & Animation (DMVA), culminating in portfolio exhibits and 600-hour OJT;</li>
+        <li><strong>BLIS (156 Units):</strong> Comprehensive 400-hour dual library practicum (LPr 4201 & LPr 4202) and intensive Library Integrated Review (LIS 4101, 6 units).</li>
       </ul>
       
-      <p>Dean Ma. Christina A. Quijano expressed heartfelt gratitude to the faculty, staff, alumni, and Centralian students whose collaborative diligence made this continuing national recognition possible.</p>
+      <p>Dean Ma. Christina A. Quijano, MSCS, and program coordinators commended the faculty committees for their meticulous alignment of courses with national outcomes-based standards and Christian values.</p>
     `,
-    tags: ['PACUCOA', 'Accreditation', 'Excellence', 'Quality Education', 'Milestone']
+    tags: ['Curriculum', 'OBE', 'CHED', 'Academic Programs', 'Announcements']
   },
   {
     id: 'ccs-annual-capstone-colloquium-2026',
@@ -100,7 +100,7 @@ export const newsData = [
     badgeClass: 'badge-gold',
     date: 'March 10, 2026',
     author: 'CCS Research & Capstone Committee',
-    image: '/assets/logos/cpu-logo.png',
+    image: '/assets/logos/ccs-logo.png',
     readTime: '3 min read',
     summary: 'Graduating seniors across BSIT, BSCS, BSDMIA, and BLIS will demonstrate their final software prototypes, indie games, and digital archive systems before a panel of industry executives and alumni jurors.',
     content: `

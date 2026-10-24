@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue'
 import AppIcon from './AppIcon.vue'
 
 defineProps({
@@ -7,6 +8,34 @@ defineProps({
     required: true
   }
 })
+
+const copied = ref(false)
+let copyTimer = null
+
+const copyEmail = async (email) => {
+  if (!email) return
+  try {
+    if (navigator?.clipboard?.writeText) {
+      await navigator.clipboard.writeText(email)
+    } else {
+      const textarea = document.createElement('textarea')
+      textarea.value = email
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
+    copied.value = true
+    if (copyTimer) clearTimeout(copyTimer)
+    copyTimer = setTimeout(() => {
+      copied.value = false
+    }, 2000)
+  } catch (err) {
+    console.error('Failed to copy email:', err)
+  }
+}
 </script>
 
 <template>
@@ -48,14 +77,10 @@ defineProps({
         </span>
       </div>
 
-      <div class="contact-details">
-        <div v-if="faculty.office" class="contact-row">
+      <div v-if="faculty.office" class="contact-details">
+        <div class="contact-row">
           <AppIcon name="map-pin" :size="14" class="meta-icon" />
           <span>{{ faculty.office }}</span>
-        </div>
-        <div v-if="faculty.consultationHours" class="contact-row">
-          <AppIcon name="clock" :size="14" class="meta-icon" />
-          <span>{{ faculty.consultationHours }}</span>
         </div>
       </div>
 
@@ -66,10 +91,16 @@ defineProps({
     </div>
 
     <div class="card-action">
-      <a :href="`mailto:${faculty.email}`" class="email-btn" :title="`Email ${faculty.name}`">
-        <AppIcon name="mail" :size="16" />
-        <span>{{ faculty.email }}</span>
-      </a>
+      <button
+        type="button"
+        class="email-btn"
+        :class="{ 'is-copied': copied }"
+        :title="copied ? 'Email copied to clipboard!' : `Copy email: ${faculty.email}`"
+        @click="copyEmail(faculty.email)"
+      >
+        <AppIcon :name="copied ? 'check' : 'mail'" :size="16" />
+        <span>{{ copied ? 'Copied!' : faculty.email }}</span>
+      </button>
     </div>
   </div>
 </template>
@@ -250,9 +281,10 @@ defineProps({
   font-size: 0.825rem;
   font-weight: 600;
   color: var(--cpu-navy);
-  border: 1px solid rgba(0, 33, 71, 0.15);
+  border: 1px solid rgba(22, 22, 42, 0.18);
   border-radius: var(--radius-sm);
   background: #ffffff;
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
@@ -260,6 +292,12 @@ defineProps({
   background-color: var(--cpu-navy);
   color: #ffffff;
   border-color: var(--cpu-navy);
+}
+
+.email-btn.is-copied {
+  background-color: #059669;
+  color: #ffffff;
+  border-color: #059669;
 }
 </style>
 

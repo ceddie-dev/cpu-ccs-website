@@ -254,13 +254,13 @@ const associatedFaculty = computed(() => {
           <AppIcon name="library" :size="24" class="gold-icon" />
           <div>
             <strong>Bachelor of Library and Information Science (BLIS)</strong>
-            <p>CHED PSG & PRC Board Licensure Examination for Librarians Aligned</p>
+            <p>Commission on Higher Education (CHED) CMO 24 Series of 2015 Compliant</p>
           </div>
         </div>
 
         <h4>Prospectus Summary</h4>
         <p>
-          This guide details the curriculum components, metadata cataloging labs, institutional repository servers, and PRC Licensure Examination intensive review modules (156 units).
+          This guide details the curriculum components, metadata cataloging labs, institutional repository servers, dual library practicum, and Library Integrated Review (156 academic units).
         </p>
 
         <div class="prospectus-specifications">
@@ -273,11 +273,11 @@ const associatedFaculty = computed(() => {
             <strong>PRC Board Licensure for Librarians (RL)</strong>
           </div>
           <div class="spec-row">
-            <span>Archival Practicum:</span>
-            <strong>400 Hours (200 hrs Academic/School + 200 hrs Public/Special)</strong>
+            <span>Library Practicum:</span>
+            <strong>400 Hours Dual Practicum (LPr 4201 200 hrs + LPr 4202 200 hrs)</strong>
           </div>
           <div class="spec-row">
-            <span>Department Head:</span>
+            <span>Program Coordinator:</span>
             <strong>Prof. Ana Mae B. Cantel, MLIS, RL</strong>
           </div>
         </div>
@@ -530,7 +530,8 @@ const associatedFaculty = computed(() => {
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: rgba(0, 33, 71, 0.15);
+  color: var(--cpu-gold);
+  opacity: 1;
   margin-bottom: 0.75rem;
 }
 

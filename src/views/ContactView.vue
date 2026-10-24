@@ -27,6 +27,34 @@ const errors = reactive({
 const isSubmittedModalOpen = ref(false)
 const submittedData = ref(null)
 
+const copiedEmail = ref('')
+let copyTimer = null
+
+const copyEmail = async (email) => {
+  if (!email) return
+  try {
+    if (navigator?.clipboard?.writeText) {
+      await navigator.clipboard.writeText(email)
+    } else {
+      const textarea = document.createElement('textarea')
+      textarea.value = email
+      textarea.style.position = 'fixed'
+      textarea.style.opacity = '0'
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textarea)
+    }
+    copiedEmail.value = email
+    if (copyTimer) clearTimeout(copyTimer)
+    copyTimer = setTimeout(() => {
+      copiedEmail.value = ''
+    }, 2000)
+  } catch (err) {
+    console.error('Failed to copy email:', err)
+  }
+}
+
 const validateEmail = (email) => {
   const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
   return re.test(email)
@@ -318,8 +346,34 @@ const resetForm = () => {
                   <AppIcon name="mail" :size="18" class="info-icon" />
                   <div>
                     <strong>Official Email Addresses</strong>
-                    <p><a href="mailto:ccs@cpu.edu.ph">ccs@cpu.edu.ph</a> (Dean's Office)</p>
-                    <p><a href="mailto:infotech@cpu.edu.ph">infotech@cpu.edu.ph</a> (IT Department)</p>
+                    <div class="email-copy-group">
+                      <div class="email-copy-row">
+                        <button
+                          type="button"
+                          class="copy-email-btn"
+                          :class="{ 'is-copied': copiedEmail === 'ccs@cpu.edu.ph' }"
+                          @click="copyEmail('ccs@cpu.edu.ph')"
+                          title="Click to copy email address"
+                        >
+                          <AppIcon :name="copiedEmail === 'ccs@cpu.edu.ph' ? 'check' : 'copy'" :size="14" />
+                          <span>{{ copiedEmail === 'ccs@cpu.edu.ph' ? 'Copied!' : 'ccs@cpu.edu.ph' }}</span>
+                        </button>
+                        <span class="email-subtext">(Dean's Office)</span>
+                      </div>
+                      <div class="email-copy-row">
+                        <button
+                          type="button"
+                          class="copy-email-btn"
+                          :class="{ 'is-copied': copiedEmail === 'infotech@cpu.edu.ph' }"
+                          @click="copyEmail('infotech@cpu.edu.ph')"
+                          title="Click to copy email address"
+                        >
+                          <AppIcon :name="copiedEmail === 'infotech@cpu.edu.ph' ? 'check' : 'copy'" :size="14" />
+                          <span>{{ copiedEmail === 'infotech@cpu.edu.ph' ? 'Copied!' : 'infotech@cpu.edu.ph' }}</span>
+                        </button>
+                        <span class="email-subtext">(IT Department)</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -336,22 +390,58 @@ const resetForm = () => {
                 <li>
                   <strong>Dean's Office</strong>
                   <span>Prof. Ma. Christina A. Quijano, MSCS</span>
-                  <small>ccs@cpu.edu.ph</small>
+                  <button
+                    type="button"
+                    class="dept-email-btn"
+                    :class="{ 'is-copied': copiedEmail === 'ccs@cpu.edu.ph' }"
+                    @click="copyEmail('ccs@cpu.edu.ph')"
+                    title="Click to copy email"
+                  >
+                    <AppIcon :name="copiedEmail === 'ccs@cpu.edu.ph' ? 'check' : 'mail'" :size="12" />
+                    <span>{{ copiedEmail === 'ccs@cpu.edu.ph' ? 'Copied!' : 'ccs@cpu.edu.ph' }}</span>
+                  </button>
                 </li>
                 <li>
                   <strong>IT & IS Department Head</strong>
                   <span>Prof. Rea P. Balontong, MBA</span>
-                  <small>rbalontong@cpu.edu.ph</small>
+                  <button
+                    type="button"
+                    class="dept-email-btn"
+                    :class="{ 'is-copied': copiedEmail === 'rbalontong@cpu.edu.ph' }"
+                    @click="copyEmail('rbalontong@cpu.edu.ph')"
+                    title="Click to copy email"
+                  >
+                    <AppIcon :name="copiedEmail === 'rbalontong@cpu.edu.ph' ? 'check' : 'mail'" :size="12" />
+                    <span>{{ copiedEmail === 'rbalontong@cpu.edu.ph' ? 'Copied!' : 'rbalontong@cpu.edu.ph' }}</span>
+                  </button>
                 </li>
                 <li>
                   <strong>CS & DMIA Program Coordinator</strong>
                   <span>Prof. Marjee Rose B. Parreño, MSCS, MBA</span>
-                  <small>mrparreno@cpu.edu.ph</small>
+                  <button
+                    type="button"
+                    class="dept-email-btn"
+                    :class="{ 'is-copied': copiedEmail === 'mrparreno@cpu.edu.ph' }"
+                    @click="copyEmail('mrparreno@cpu.edu.ph')"
+                    title="Click to copy email"
+                  >
+                    <AppIcon :name="copiedEmail === 'mrparreno@cpu.edu.ph' ? 'check' : 'mail'" :size="12" />
+                    <span>{{ copiedEmail === 'mrparreno@cpu.edu.ph' ? 'Copied!' : 'mrparreno@cpu.edu.ph' }}</span>
+                  </button>
                 </li>
                 <li>
                   <strong>BLIS Program Coordinator</strong>
                   <span>Prof. Ana Mae B. Cantel, MLIS, RL</span>
-                  <small>acantel@cpu.edu.ph</small>
+                  <button
+                    type="button"
+                    class="dept-email-btn"
+                    :class="{ 'is-copied': copiedEmail === 'acantel@cpu.edu.ph' }"
+                    @click="copyEmail('acantel@cpu.edu.ph')"
+                    title="Click to copy email"
+                  >
+                    <AppIcon :name="copiedEmail === 'acantel@cpu.edu.ph' ? 'check' : 'mail'" :size="12" />
+                    <span>{{ copiedEmail === 'acantel@cpu.edu.ph' ? 'Copied!' : 'acantel@cpu.edu.ph' }}</span>
+                  </button>
                 </li>
               </ul>
             </div>
@@ -427,6 +517,14 @@ const resetForm = () => {
         <button class="btn btn-navy" @click="resetForm">Clear & Close Form</button>
       </template>
     </BaseModal>
+
+    <!-- Floating Copy Confirmation Toast -->
+    <Transition name="fade">
+      <div v-if="copiedEmail" class="floating-copy-toast" role="status" aria-live="polite">
+        <AppIcon name="check-circle" :size="18" class="toast-icon" />
+        <span>Email copied to clipboard: <strong>{{ copiedEmail }}</strong></span>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -673,6 +771,108 @@ const resetForm = () => {
 
 .info-item a:hover {
   color: var(--cpu-gold-hover);
+}
+
+/* Email Copy Functionality Styles */
+.email-copy-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.email-copy-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.copy-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--cpu-navy);
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(22, 22, 42, 0.2);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.copy-email-btn:hover {
+  background-color: var(--cpu-navy);
+  color: #ffffff;
+  border-color: var(--cpu-navy);
+}
+
+.copy-email-btn.is-copied {
+  background-color: #059669;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+.email-subtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dept-email-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--cpu-navy);
+  background-color: var(--bg-subtle);
+  border: 1px solid rgba(22, 22, 42, 0.15);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  width: fit-content;
+  transition: all var(--transition-fast);
+}
+
+.dept-email-btn:hover {
+  background-color: var(--cpu-navy);
+  color: #ffffff;
+  border-color: var(--cpu-navy);
+}
+
+.dept-email-btn.is-copied {
+  background-color: #059669;
+  color: #ffffff;
+  border-color: #059669;
+}
+
+/* Floating Toast Notification */
+.floating-copy-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  background-color: #16162A;
+  color: #ffffff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  border-left: 4px solid var(--cpu-gold);
+}
+
+.toast-icon {
+  color: #10b981;
+}
+
+.floating-copy-toast strong {
+  color: var(--cpu-gold);
 }
 
 .dept-contact-list {

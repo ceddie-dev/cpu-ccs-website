@@ -40,7 +40,7 @@ const closeModal = () => {
             <div class="hero-badges">
               <span class="badge badge-gold">
                 <AppIcon name="award" :size="14" />
-                <span>PACUCOA Level III Accredited</span>
+                <span>CHED Recognized Programs</span>
               </span>
               <span class="badge badge-navy hero-badge-white">
                 <span>Scientia et Fides</span>
@@ -93,21 +93,13 @@ const closeModal = () => {
           <div class="hero-visual">
             <div class="visual-card">
               <div class="card-glow"></div>
-              <div class="logos-cluster">
-                <img
-                  src="/assets/logos/cpu-logo.png"
-                  alt="CPU Official Crest"
-                  class="cluster-logo cpu"
-                  width="110"
-                  height="110"
-                />
-                <div class="cluster-symbol">+</div>
+              <div class="logo-standalone-wrapper">
                 <img
                   src="/assets/logos/ccs-logo.png"
-                  alt="CCS Official Seal"
-                  class="cluster-logo ccs"
-                  width="110"
-                  height="110"
+                  alt="College of Computer Studies Official Seal"
+                  class="standalone-ccs-logo"
+                  width="135"
+                  height="135"
                 />
               </div>
 
@@ -125,7 +117,7 @@ const closeModal = () => {
                 </span>
                 <span class="v-tag">
                   <AppIcon name="check-circle" :size="14" />
-                  <span>500+ Hr Internships</span>
+                  <span>600-Hr OJT Practicum</span>
                 </span>
                 <span class="v-tag">
                   <AppIcon name="check-circle" :size="14" />
@@ -254,7 +246,7 @@ const closeModal = () => {
             </div>
             <h3>Active Student Orgs</h3>
             <p>
-              Student chapters including CPU Computer Science Society (CSS), MIDAS, and LISSO host annual hackathons, code clinics, and creative exhibitions.
+              Four recognized student societies—CSS, ITSO, MIDAS, and LISSO—support academic seminars, tech workshops, and peer collaboration across all programs.
             </p>
           </div>
 
@@ -284,7 +276,7 @@ const closeModal = () => {
             </div>
             <h3>Industry Internships</h3>
             <p>
-              Over 500 hours of supervised on-the-job training with regional and multinational software firms, game studios, and government information agencies.
+              Up to 600 hours of supervised on-the-job training (CCS 4201) with regional and multinational software firms, enterprise partners, and partner institutions.
             </p>
           </div>
         </div>
@@ -492,23 +484,23 @@ const closeModal = () => {
   pointer-events: none;
 }
 
-.logos-cluster {
+.logo-standalone-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
   margin-bottom: 2rem;
 }
 
-.cluster-logo {
+.standalone-ccs-logo {
+  width: 135px;
+  height: 135px;
   object-fit: contain;
-  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+  transition: transform var(--transition-normal);
 }
 
-.cluster-symbol {
-  font-size: 1.75rem;
-  color: var(--cpu-gold);
-  font-weight: 700;
+.standalone-ccs-logo:hover {
+  transform: scale(1.05);
 }
 
 .visual-quote {

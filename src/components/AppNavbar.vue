@@ -76,17 +76,9 @@ const programs = [
     <!-- Main Navigation Bar -->
     <nav class="main-navbar" aria-label="Main Navigation">
       <div class="container navbar-container">
-        <!-- University & College Logos Brand -->
+        <!-- College Logo Brand -->
         <RouterLink to="/" class="brand-link" aria-label="CPU College of Computer Studies Home">
-          <div class="brand-logos">
-            <img
-              src="/assets/logos/cpu-logo.png"
-              alt="Central Philippine University Official Crest"
-              class="logo-cpu"
-              width="50"
-              height="50"
-            />
-            <div class="logos-divider"></div>
+          <div class="brand-logo-wrapper">
             <img
               src="/assets/logos/ccs-logo.png"
               alt="CPU College of Computer Studies Official Seal"
@@ -105,7 +97,7 @@ const programs = [
         <div class="desktop-menu">
           <ul class="nav-links">
             <li>
-              <RouterLink to="/" class="nav-link" active-class="active-link" exact>
+              <RouterLink to="/" class="nav-link" exact-active-class="active-link">
                 Home
               </RouterLink>
             </li>
@@ -199,8 +191,7 @@ const programs = [
         <div class="mobile-drawer" @click.stop>
           <div class="drawer-header">
             <div class="drawer-brand">
-              <img src="/assets/logos/cpu-logo.png" alt="CPU Logo" class="drawer-logo" width="36" height="36" />
-              <img src="/assets/logos/ccs-logo.png" alt="CCS Logo" class="drawer-logo" width="36" height="36" />
+              <img src="/assets/logos/ccs-logo.png" alt="CCS Logo" class="drawer-logo" width="38" height="38" />
               <div class="drawer-brand-text">
                 <strong>CPU CCS</strong>
                 <small>College of Computer Studies</small>
@@ -351,12 +342,14 @@ const programs = [
 .main-navbar {
   padding: 0.75rem 0;
   background-color: #ffffff;
+  width: 100%;
 }
 
 .navbar-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   gap: 1.5rem;
 }
 
@@ -364,38 +357,36 @@ const programs = [
 .brand-link {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
   text-decoration: none;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
-.brand-logos {
+.brand-logo-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.logo-cpu,
 .logo-ccs {
-  width: 46px;
-  height: 46px;
+  width: 48px;
+  height: 48px;
   object-fit: contain;
+  flex-shrink: 0;
   transition: transform var(--transition-fast);
 }
 
-.brand-link:hover .logo-cpu,
 .brand-link:hover .logo-ccs {
-  transform: scale(1.05);
-}
-
-.logos-divider {
-  width: 1px;
-  height: 34px;
-  background-color: var(--border-color);
+  transform: scale(1.06);
 }
 
 .brand-text {
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .brand-sub {
@@ -404,6 +395,7 @@ const programs = [
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .brand-main {
@@ -412,34 +404,51 @@ const programs = [
   font-weight: 800;
   color: var(--cpu-navy);
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 /* Desktop Menu */
 .desktop-menu {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  flex-shrink: 0;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
+  position: static;
+}
+
+.nav-links li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-link {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 0.75rem;
   font-size: 0.925rem;
   font-weight: 600;
   color: var(--text-secondary);
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
+  white-space: nowrap;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .nav-link:hover {
@@ -451,6 +460,7 @@ const programs = [
   color: var(--cpu-navy) !important;
   background-color: var(--cpu-navy-soft);
   position: relative;
+  margin: 0;
 }
 
 .active-link::after {
@@ -463,15 +473,28 @@ const programs = [
   height: 3px;
   background-color: var(--cpu-gold);
   border-radius: var(--radius-pill);
+  pointer-events: none;
 }
 
 /* Dropdown */
 .dropdown-wrapper {
   position: relative;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-toggle {
   cursor: pointer;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  font-size: 0.925rem;
+  font-weight: 600;
+  line-height: inherit;
+  margin: 0;
+  padding: 0.5rem 0.85rem;
 }
 
 .rotate-180 {
@@ -751,7 +774,24 @@ const programs = [
 }
 
 /* Responsive queries */
-@media (max-width: 1024px) {
+@media (max-width: 1240px) {
+  .navbar-container {
+    gap: 1rem;
+  }
+  .desktop-menu {
+    gap: 1rem;
+  }
+  .nav-links {
+    gap: 0.9rem;
+  }
+  .nav-link,
+  .dropdown-toggle {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1100px) {
   .desktop-menu {
     display: none;
   }
@@ -770,7 +810,6 @@ const programs = [
   .brand-main {
     font-size: 1rem;
   }
-  .logo-cpu,
   .logo-ccs {
     width: 38px;
     height: 38px;

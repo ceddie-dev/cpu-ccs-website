@@ -5,12 +5,16 @@
 
 :root {
   /* CPU Primary Colors */
-  --cpu-navy: #002147;
-  --cpu-navy-dark: #00152e;
-  --cpu-navy-light: #0a3366;
-  --cpu-navy-soft: #eaf1fa;
-  --cpu-navy-gradient: linear-gradient(135deg, #002147 0%, #0a3366 100%);
-  --cpu-navy-hero: linear-gradient(135deg, #001835 0%, #002147 60%, #0d3870 100%);
+  --cpu-navy: #16162A;
+  --cpu-navy-dark: #101020;
+  --cpu-navy-light: #24243e;
+  --cpu-navy-soft: #ececf4;
+  --cpu-navy-gradient: linear-gradient(135deg, #16162A 0%, #252542 100%);
+  --cpu-navy-hero: linear-gradient(135deg, #0e0e1a 0%, #16162A 60%, #22223c 100%);
+
+  /* Dark Accent Colors */
+  --dark-accent: #16162A;
+  --color-dark-accent: #16162A;
 
   /* CPU Gold Accents */
   --cpu-gold: #f5b800;
@@ -26,7 +30,7 @@
   --accent-rose: #e11d48;
 
   /* Neutrals & Typography */
-  --text-primary: #0f172a;
+  --text-primary: #16162A;
   --text-secondary: #334155;
   --text-muted: #64748b;
   --text-light: #94a3b8;
@@ -41,7 +45,7 @@
   /* Borders */
   --border-color: #e2e8f0;
   --border-dark: #cbd5e1;
-  --border-focus: #002147;
+  --border-focus: #16162A;
 
   /* Shadows */
   --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -107,7 +111,7 @@ main {
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
-  color: var(--cpu-navy);
+  color: #16162A;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -119,6 +123,32 @@ h3 { font-size: clamp(1.35rem, 2vw + 0.25rem, 1.85rem); }
 h4 { font-size: 1.25rem; }
 h5 { font-size: 1.1rem; }
 h6 { font-size: 0.95rem; }
+
+/* Numerical Stats & Key Figures (#16162A for accessible contrast on light backgrounds) */
+.stat-number,
+.stat-count,
+.stat-value,
+.numerical-stat,
+.matrix-stat strong,
+.s-ribbon-item strong {
+  color: #16162A;
+}
+
+/* Decorative Card / Competency Numbers (CPU Gold) */
+.area-number,
+.card-number,
+.competency-number {
+  color: var(--cpu-gold);
+  opacity: 1;
+}
+
+/* Inverted contrast for stats on dark navy surfaces */
+.bg-navy .stat-number,
+.hero-navy .stat-number,
+.hero-stats .stat-number,
+.hero-stats-card .h-num {
+  color: var(--cpu-gold);
+}
 
 p {
   color: var(--text-secondary);

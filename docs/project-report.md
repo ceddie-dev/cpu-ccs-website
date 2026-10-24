@@ -55,7 +55,7 @@ Date of Submission: October 2026
 
 Central Philippine University (CPU), established in 1905 through the benevolence of American industrialist John D. Rockefeller and American Baptist missionaries, has long stood as an institution dedicated to **Scientia et Fides** (Science and Faith) and **Exemplary Christian Education for Life (EXCEL)**. Within this heritage, the **College of Computer Studies (CCS)** serves as the university's epicenter for computing education, software engineering, interactive media production, and information sciences.
 
-In the contemporary digital era, a college's web portal represents its primary institutional gateway for prospective freshmen, enrolled students, alumni, faculty, researchers, and global industry partners. The portal must project academic prestige, communicate essential curriculum frameworks, reflect PACUCOA Level III accreditation standards, and provide seamless, responsive access across all modern desktop, tablet, and smartphone screens.
+In the contemporary digital era, a college's web portal represents its primary institutional gateway for prospective freshmen, enrolled students, alumni, faculty, researchers, and global industry partners. The portal must project academic prestige, communicate essential curriculum frameworks, reflect documented quality assurance milestones, and provide seamless, responsive access across all modern desktop, tablet, and smartphone screens.
 
 This project implements a complete redesign and frontend engineering overhaul of the CPU College of Computer Studies website (reference: `https://ccs.cpu.edu.ph/`). Utilizing a modern Single-Page Application (SPA) architecture built on **Vue.js 3**, **Vite**, and **Vue Router 4**, the redesigned website preserves CPU's authentic institutional identity while drastically advancing visual aesthetics, navigational speed, content organization, accessibility, and interactive usability.
 
@@ -200,37 +200,36 @@ CPU College of Computer Studies Web Portal
 ## 6. WEBSITE PAGES, FEATURES, AND USER MANUAL
 
 ### 6.1 Home Portal (`/`)
-* **Hero Banner:** Displays CPU and CCS logos, PACUCOA Level III accreditation badge, institutional statistics (4 Degree Programs, 17 Faculty/Staff, 100% OBE Curriculum), and dual action buttons.
+* **Hero Banner:** Displays CPU and CCS logos, CHED Recognized Programs badge, institutional statistics (4 Degree Programs, 17 Faculty/Staff, 100% OBE Curriculum), and dual action buttons.
 * **Dean's Welcome Section:** Displays the official portrait of Dean Ma. Christina A. Quijano, MSCS (`/assets/faculty/dean-picture.png`), accompanied by her welcoming address and leadership philosophy.
 * **Academic Program Grid:** Renders four `ProgramCard.vue` components detailing BSIT, BSCS, BSDMIA, and BLIS.
-* **The Centralian Advantage:** Highlights specialized labs, PACUCOA accreditation, student societies, faith integration, hackathon champions, and 500+ hour internships.
+* **The Centralian Advantage:** Highlights specialized labs, documented accreditation milestones, student societies, faith integration, hackathon champions, and extensive industry practicums.
 * **Latest News Preview:** Displays three real-world news stories with an interactive reading modal.
 
 ### 6.2 About the College (`/about`)
 * **Heritage Narrative:** Details CPU's founding in 1905, the university motto *Scientia et Fides*, and the institutional commitment to exemplary Christian education.
-* **Five Decades of Computing Heritage (Interactive 5-Era Timeline):** Features an interactive chronological timeline covering:
-  - Era 1 (1995–2000): Early Inception in Mary Thomas Building under the College of Engineering (Prof. Penetrante).
-  - Era 2 (2001–2007): Board of Trustees grants independence; College of Computer Studies chartered under Engr. Alberto A. Calibjo; launch of BSIT & BSIS.
-  - Era 3 (2008–2013): Professionalization under Dean Prof. Gicana; initial PAASCU survey visits.
-  - Era 4 (2014–2019): Launch of BSDMIA (2014); PAASCU Level I Accreditation (2015); BLIS formal transfer into CCS (2018); clean 5-year PAASCU re-accreditation (2019); PACUCOA orientation for BLIS.
-  - Era 5 (2020–Present): Dean Prof. Ma. Christina A. Quijano, MSCS leads digital learning resilience, iMac lab modernization, and complete AY 2024–2025 OBE curriculum overhaul.
+* **Computing Heritage (Interactive 4-Era Timeline):** Features an interactive chronological timeline strictly reflecting the 14 verified baseline milestones:
+  - Era 1 (1995–2000): 1995 Inception of Computer Science under the College of Commerce, headed by Prof. Mary O’ T. Penetrante.
+  - Era 2 (2001–2005): 1st Sem AY 2001–2002 transfer to the College of Engineering (SE & CS Department headed by Engr. Cirilo C. Calibjo, PEE); end of AY 2002–2003 proposal to combine BSCS, BSISM, and BSIT under one college approved; 1st Sem AY 2003–2004 CCS formally established in Mary Thomas Building with Engr. Cirilo C. Calibjo, PEE as first Dean; April 2004 MCS and MSCS approved.
+  - Era 3 (2006–2013): AY 2006–2007 Prof. Rodney A. Gicana appointed Officer-in-Charge (OIC) during Engr. Calibjo's doctoral studies; 2011 PAASCU accreditation application and preliminary survey visit.
+  - Era 4 (2014–2019): 2014 BSDMIA established & PAASCU consultancy; March–June 2015 formal PAASCU visit resulting in reported Level 1 status for BSCS, BSIT, BSIS; June 2016 Prof. Rea P. Balontong appointed OIC; June 2018 BLIS migration to CCS; AY 2018–2019 Prof. Ma. Christina A. Quijano appointed OIC; Sept 16–18, 2019 Level 1 re-accreditation milestone reported; Oct 2019 PACUCOA orientation for BLIS.
 * **Live-Verified Vision, Mission & Quality Policy:** Exact official statements retrieved from `https://ccs.cpu.edu.ph/vision-and-mission/` and CPU central quality manual.
 * **Specialized Laboratories:** High-tech facilities showcase: Apple Macintosh Multimedia Lab, Cisco Networking & Security Lab, VR Simulation Studio, Cloud Virtualization Lab, Hardware Diagnostics Room, and Digital Library Informatics Hub.
-* **Student Organizations:** Profiles for CSS, MIDAS, and LISSO with official insignias.
+* **Student Organizations:** Profiles for all four official student bodies: Computer Science Society (CSS), Information Technology Student Organization (ITSO), Media & Interactive Design Arts Society (MIDAS), and Library & Information Science Student Organization (LISSO). ITSO is rendered with an authentic CSS acronym badge in CPU navy and gold.
 * **FAQ Accordion:** Interactive accordion addressing admissions, accreditation, facilities, scholarships, and licensure exams.
 
 ### 6.3 Academic Program Pages (`/programs/bsit`, `/programs/bscs`, `/programs/bsdmia`, `/programs/blis`)
 * **Program Header:** Program emblem (`/assets/program-icons/...`), accreditation badge, degree duration, department head identification, and quick facts.
-* **Outcomes-Based Education (OBE):** CHED CMO 25 s.2015 / CMO 10 s.2017 educational objectives and student outcomes.
+* **Outcomes-Based Education (OBE):** CHED CMO 25 s.2015 / CMO 24 s.2015 educational objectives and student outcomes.
 * **Areas of Study & Technical Competencies:** 4 in-depth domain pillars for each degree program.
 * **Interactive Curriculum Matrix (`CurriculumViewer.vue`):**
-  - Live data from `src/data/curricula.js` extracted from the 4 official 2024 signed checklists.
+  - Live data from `src/data/curricula.js` extracted from the 4 official 2024 curriculum checklists (featuring official typed endorsement blocks).
   - Interactive Year-Level tabs (First Year to Fourth Year) and Semester selectors (First Sem, Second Sem, Summer).
   - Subject code badges, lecture and lab hour distributions, credit units, prerequisites, and co-requisites.
-  - **BSIT (161 Units):** Database Administration Track vs. Internet of Things (IoT) Track.
-  - **BSCS (164 Units):** Software Development, Data Science, and Cybersecurity Tracks.
-  - **BSDMIA (164 Units):** Digital Media & Broadcast Design Track vs. Visualization & Animation Track toggles for Third Year.
-  - **BLIS (156 Units):** 400-hour dual practicum breakdown and PRC Licensure Examination Review modules.
+  - **BSIT (161 Units):** Database Administration Track (`CCSPE 1100–1400`) vs. Internet of Things (IoT) Track (`ITPE 1100–1400`), `CSS 3600` / `CCS 4100` CCS Thesis sequence, and `CCS 4201` On-the-Job Training (600 hours).
+  - **BSCS (164 Units):** Software Development (`CSPE 4100/4200/4300`), Data Science (`CSPE 3101/3300/3400`), and Cybersecurity (`CSPE 5100/5200/5300`) Tracks, `CCS 3600` / `CCS 4100` CCS Thesis sequence, and `CCS 4201` On-the-Job Training (600 hours).
+  - **BSDMIA (164 Units):** Digital Media & Broadcast Design Track (`DMBD 3101/3105/3202/3204`) vs. Visualization & Animation Track (`DMVA 3204/3105a/3104/3205`) toggles for Third Year, `DMIA 3200` / `DMIA 4100` Portfolio Development sequence, and `CCS 4201` On-the-Job Training (600 hours).
+  - **BLIS (156 Units):** 400-hour dual practicum breakdown (`LPr 4201` & `LPr 4202`, 200 hrs each), `LIS 3202` Thesis/Research Writing, and `LIS 4101` Library Integrated Review (6 units) under CHED CMO 24, Series of 2015.
   - **Full 4-Year Matrix Modal Dialog:** Provides an expansive modal table enabling advisors and students to review the complete multi-year roadmap in one view.
 * **Career Pathways:** Grid of career opportunity cards detailing job roles, industry sectors, and workplace descriptions.
 * **Verified Faculty Roster:** Dynamically filtered `FacultyCard.vue` components displaying only the instructors associated with that specific degree.
@@ -244,7 +243,7 @@ CPU College of Computer Studies Web Portal
 
 ### 6.5 News, Events & Announcements (`/news`)
 * **Category Pills:** Filter by Events, Achievements, Community, or Announcements.
-* **Authentic Stories:** Features the Startup Your World! Hackathon, Team SEntralians' International Hackathon victory with BricolAI, Project KULAY outreach, and PACUCOA Level III re-accreditation.
+* **Authentic Stories:** Features the Startup Your World! Hackathon, Team SEntralians' International Hackathon victory with BricolAI, Project KULAY outreach, and the rollout of updated AY 2024–2025 curriculum checklists.
 * **Full Article Modal:** Clicking any card opens a reading dialog with the complete text, author, date, and hashtags.
 
 ### 6.6 Contact Us (`/contact`)
@@ -326,7 +325,7 @@ CPU College of Computer Studies/
 │   │   │   ├── BsCsView.vue        # BS Computer Science View
 │   │   │   ├── BsDmiaView.vue      # BS Digital Media & Interactive Arts View
 │   │   │   └── BsItView.vue        # BS Information Technology View
-│   │   ├── AboutView.vue           # About College, 5-Era Timeline & Laboratories
+│   │   ├── AboutView.vue           # About College, 4-Era Timeline & Laboratories
 │   │   ├── ContactView.vue         # Validated Contact Form & Directory View
 │   │   ├── FacultyView.vue         # Interactive Faculty Directory View
 │   │   ├── HomeView.vue            # Modernized Homepage Portal View
@@ -477,15 +476,16 @@ Future enhancements may integrate headless Content Management Systems (CMS) or b
 4. **Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA)**  
    *Accreditation Standards and Guidelines for Higher Education Computing Programs.*
 5. **Commission on Higher Education (CHED)**  
-   *Memorandum Order No. 10, Series of 2017: Policies, Standards, and Guidelines for Bachelor of Library and Information Science (BLIS) Program.*
+   *Memorandum Order No. 24, Series of 2015: Revised Policies, Standards, and Guidelines for Bachelor of Library and Information Science (BLIS) Program.*
 6. **Central Philippine University — College of Computer Studies Official Curricula (AY 2024–2025)**  
    - *BSIT Curriculum Checklist 2024–2025* (Revision 12 on CHED CMO 25 s.2015; 161 Total Academic Units)
-   - *BSCS Curriculum Checklist 2024–2025* (Revision 12 on CHED CMO 25 s.2015; 164 Total Academic Units)
-   - *DMIA Curriculum Checklist 2024–2025* (Digital Media & Interactive Arts; 164 Total Academic Units)
-   - *BLIS Curriculum Checklist 2024–2025* (CHED CMO 10 s.2017 & PRC Licensure; 156 Total Academic Units)
-7. **CPU College of Computer Studies Examination Project Audits**  
+   - *BSCS Curriculum Checklist 2024–2025* (Revision on CHED CMO 25 s.2015; 164 Total Academic Units)
+   - *DMIA Curriculum Checklist 2024–2025* (Digital Media Interactive Arts; 164 Total Academic Units)
+   - *BLIS Curriculum Checklist 2024–2025* (CHED CMO 24 s.2015 & PRC Licensure; 156 Total Academic Units)
+7. **CPU College of Computer Studies Examination Project Audits & Verification**  
    - `docs/content-audit.md`: Academic & Faculty Content Audit Matrix
    - `docs/design-audit.md`: UI/UX & Design System Audit Matrix
+   - `docs/curriculum-verification.md`: Line-by-Line Checklist Audit & Typed Endorsement Verification
 8. **Vue.js 3 Official Documentation**  
    Evan You and the Vue Core Team. URL: `https://vuejs.org/`
 9. **Vue Router 4 Documentation**  

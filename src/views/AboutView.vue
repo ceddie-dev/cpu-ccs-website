@@ -12,179 +12,203 @@ const toggleFaq = (index) => {
   activeFaqIndex.value = activeFaqIndex.value === index ? null : index
 }
 
-const breadcrumbs = [
-  { label: 'About the College' }
-]
+const breadcrumbs = [{ label: 'About the College' }]
 
 const historyEras = [
   {
     id: 'era-1',
     era: '1995–2000',
     title: 'Foundations & Early Inception',
-    subtitle: 'Beginnings under the College of Engineering',
-    summary: 'The birth of computer education at CPU, starting from foundational microcomputer labs in the historic Mary Thomas Building.',
+    subtitle: 'Computer Science under the College of Commerce',
+    summary:
+      'The origins of formal computing education at Central Philippine University, initiated within the College of Commerce under pioneer department leadership.',
     milestones: [
       {
         year: '1995',
-        title: 'Establishment of Computer Studies Department',
-        description: 'Established under the CPU College of Engineering, admitting its pioneer batch of Bachelor of Science in Computer Science (BSCS) students. Early instruction was hosted in the historic Mary Thomas Building.'
+        title: 'Inception of Computer Science under College of Commerce',
+        description:
+          'The Bachelor of Science in Computer Science (BSCS) program began under the College of Commerce, headed by Prof. Mary O’ T. Penetrante, admitting its pioneering cohort of computing students.',
       },
-      {
-        year: '1998',
-        title: 'Microcomputing Laboratory Expansion',
-        description: 'Under early computing pioneers led by Prof. Penetrante, computing facilities expanded to incorporate dedicated microcomputer labs and foundational algorithmic programming courses.'
-      }
-    ]
+    ],
   },
   {
     id: 'era-2',
-    era: '2001–2007',
-    title: 'Independence & College Establishment',
-    subtitle: 'Chartering the autonomous College of Computer Studies',
-    summary: 'Evolution from a departmental unit to an independent college under Engr. Alberto A. Calibjo, expanding into IT and Information Systems.',
+    era: '2001–2005',
+    title: 'Transition & College Establishment',
+    subtitle: 'Transfer to Engineering and the Founding of CCS',
+    summary:
+      'A pivotal period of growth, transferring through the College of Engineering before establishing an autonomous College of Computer Studies under Dean Engr. Cirilo C. Calibjo, PEE.',
     milestones: [
       {
-        year: 'March 2001',
-        title: 'CPU Board of Trustees Grants Independence',
-        description: 'The CPU Board of Trustees officially authorized the separation and establishment of the independent College of Computer Studies (CCS). Engr. Alberto A. Calibjo served as pioneering College Dean, with offices and labs moving to the new Engineering & Computer Studies wing.'
+        year: '1st Sem AY 2001–2002',
+        title: 'Transfer to College of Engineering',
+        description:
+          'The Computer Science Department transferred to the College of Engineering. The Software Engineering and Computer Science Department was headed by Engr. Cirilo C. Calibjo, PEE.',
       },
       {
-        year: '2002–2004',
-        title: 'Launch of BSIT and BSIS Degree Programs',
-        description: 'To meet the surge of the global dot-com and enterprise networking economy, the college launched the Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Information Systems (BSIS).'
-      }
-    ]
+        year: 'End of AY 2002–2003',
+        title: 'Approval of College Consolidation Proposal',
+        description:
+          'A proposal to combine the Bachelor of Science in Computer Science (BSCS), Bachelor of Science in Information Systems Management (BSISM), and Bachelor of Science in Information Technology (BSIT) under one independent college was approved.',
+      },
+      {
+        year: '1st Sem AY 2003–2004',
+        title: 'Establishment of CCS & First Dean',
+        description:
+          'The College of Computer Studies (CCS) was formally established, housed in the Mary Thomas Building. Engr. Cirilo C. Calibjo, PEE became the first Dean of the college.',
+      },
+      {
+        year: 'April 2004',
+        title: 'Graduate Degree Offerings Approved',
+        description:
+          'The Master in Computer Science (MCS) and Master of Science in Computer Science (MSCS) degree programs were approved for academic offering.',
+      },
+    ],
   },
   {
     id: 'era-3',
-    era: '2008–2013',
-    title: 'Quality Standardization & Initial Surveys',
-    subtitle: 'Professionalization and external accreditation groundwork',
-    summary: 'Transition of academic deanship under Prof. Gicana, rigorous laboratory modernizations, and initial PAASCU survey visits.',
+    era: '2006–2013',
+    title: 'Leadership Transition & Quality Assurance',
+    subtitle: 'Leadership transition and preliminary accreditation groundwork',
+    summary:
+      'Continuous academic standardization, leadership transition under Prof. Rodney A. Gicana as Officer-in-Charge, and the formal initiation of external quality surveys.',
     milestones: [
       {
-        year: '2008–2010',
-        title: 'Academic Restructuring & Laboratory Upgrades',
-        description: 'Under the leadership of Dean Prof. Gicana, modern computer laboratories were fitted with structured network cabling, dedicated database servers, and specialized software development suites.'
+        year: 'AY 2006–2007',
+        title: 'Prof. Rodney A. Gicana Appointed OIC',
+        description:
+          "Prof. Rodney A. Gicana became Officer-in-Charge (OIC) of the College of Computer Studies during Engr. Cirilo C. Calibjo's doctoral studies.",
       },
       {
         year: '2011',
-        title: 'PAASCU Preliminary Accreditation Survey',
-        description: 'The Philippine Accrediting Association of Schools, Colleges and Universities (PAASCU) conducted an initial institutional survey for BSCS and BSIT, affirming curriculum rigor and institutional commitment.'
-      }
-    ]
+        title: 'Application for PAASCU Accreditation & Preliminary Visit',
+        description:
+          'The college formally applied for Philippine Accrediting Association of Schools, Colleges and Universities (PAASCU) accreditation, and PAASCU conducted its preliminary survey visit for computing programs.',
+      },
+    ],
   },
   {
     id: 'era-4',
     era: '2014–2019',
-    title: 'Accreditation, Creative Arts & BLIS Transfer',
-    subtitle: 'Expansion into digital multimedia and library informatics',
-    summary: 'A transformative era marked by the launch of BSDMIA, PAASCU Level I and clean 5-year re-accreditations, and the integration of BLIS into CCS.',
+    title: 'Program Expansion & Accreditation Milestones',
+    subtitle: 'Digital media launch, BLIS migration, and quality accreditations',
+    summary:
+      'A dynamic period marked by the launch of BSDMIA, PAASCU Level 1 surveys and re-accreditations, leadership transitions under OIC appointments, and the integration of BLIS.',
     milestones: [
       {
         year: '2014',
-        title: 'Pioneering BSDMIA Program Launch',
-        description: 'Introduced the Bachelor of Science in Digital Media and Interactive Arts (BSDMIA), making CPU one of the first institutions in Panay to offer specialized degrees in game design and animation.'
+        title: 'BSDMIA Program Established & PAASCU Consultancy',
+        description:
+          'The Bachelor of Science in Digital Media and Interactive Arts (BSDMIA) was established. PAASCU conducted an official consultancy visit for the college.',
       },
       {
-        year: '2015',
-        title: 'PAASCU Level I Accreditation Conferred',
-        description: 'BSCS, BSIT, and BSIS achieved formal PAASCU Level I Accredited status in recognition of high instructional quality, faculty research, and library resources.'
+        year: 'March–June 2015',
+        title: 'Formal PAASCU Visit & Level 1 Conferred',
+        description:
+          'A formal PAASCU accreditation survey visit was conducted between March and June 2015, resulting in reported Level 1 accredited status for BSCS, BSIT, and BSIS.',
       },
       {
-        year: '2018',
-        title: 'BLIS Transfer to College of Computer Studies',
-        description: 'The Bachelor of Library and Information Science (BLIS) was formally integrated from the College of Arts and Sciences into CCS, unifying modern digital archives, metadata informatics, and library systems.'
+        year: 'June 2016',
+        title: 'Prof. Rea P. Balontong Appointed OIC',
+        description:
+          'Prof. Rea P. Balontong was appointed Officer-in-Charge (OIC) of the College of Computer Studies.',
       },
       {
-        year: '2019',
-        title: 'PAASCU 5-Year Re-Accreditation & PACUCOA Orientation',
-        description: 'BSCS, BSIT, and BSIS earned clean 5-year PAASCU re-accreditation. In October 2019, PACUCOA conducted an official orientation and consultancy visit for the BLIS program.'
-      }
-    ]
+        year: 'June 2018',
+        title: 'BLIS Program Migrated to CCS',
+        description:
+          'The Bachelor of Library and Information Science (BLIS) program was officially migrated to the College of Computer Studies, unifying library informatics with computing technologies.',
+      },
+      {
+        year: 'AY 2018–2019',
+        title: 'Prof. Ma. Christina A. Quijano Appointed OIC',
+        description:
+          'Prof. Ma. Christina A. Quijano was appointed Officer-in-Charge (OIC) of the College of Computer Studies.',
+      },
+      {
+        year: 'September 16–18, 2019',
+        title: 'PAASCU Level 1 Re-Accreditation Milestone',
+        description:
+          'A formal re-survey visit occurred on September 16–18, 2019, recording a Level 1 re-accreditation milestone for the computing programs.',
+      },
+      {
+        year: 'October 2019',
+        title: 'PACUCOA Orientation for BLIS',
+        description:
+          'The BLIS program underwent an official orientation and consultancy visit conducted by the Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA).',
+      },
+    ],
   },
-  {
-    id: 'era-5',
-    era: '2020–Present',
-    title: 'Digital Resilience & OBE 2024 Overhaul',
-    subtitle: 'Modern hybrid learning and latest curriculum revision',
-    summary: 'Dean Prof. Ma. Christina A. Quijano, MSCS leads the college through modern digital transformation and comprehensive AY 2024–2025 curriculum overhauls.',
-    milestones: [
-      {
-        year: '2020–2023',
-        title: 'Leadership of Dean Quijano & Hybrid Innovation',
-        description: 'Dean Prof. Ma. Christina A. Quijano, MSCS steered the college through pandemic-era digital transformation with advanced LMS platforms, virtualized labs, and flexible learning setups.'
-      },
-      {
-        year: '2024–2025',
-        title: 'Complete AY 2024–2025 Curriculum Overhaul',
-        description: 'Comprehensive curriculum revisions officially approved: BSIT (161 units with DBA & IoT electives), BSCS (164 units with Software Dev, Data Science, and Cybersecurity electives), BSDMIA (164 units with Digital Media & Broadcast Design vs. Visualization & Animation tracks), and BLIS (156 units with intensive board exam review and 400 hours dual practicum).'
-      }
-    ]
-  }
 ]
 
-const facilities = [
+const partners = [
   {
-    name: 'Apple Macintosh Multimedia Lab',
-    desc: 'High-performance iMac workstations loaded with industry-standard creative suites for 2D/3D animation, video post-production, digital sculpting, and Xcode iOS app development.',
-    icon: 'monitor',
-    capacity: '40 Workstations'
+    name: 'Acer Academy',
+    logo: '/assets/partners/Acer Academy.png',
   },
   {
-    name: 'Cisco Networking & Security Lab',
-    desc: 'Equipped with enterprise-grade Cisco routers, managed layer-2 and layer-3 switches, firewall appliances, and patch bays for hands-on packet routing and packet analysis.',
-    icon: 'shield',
-    capacity: '35 Workstations'
+    name: 'Cisco Networking Academy',
+    logo: '/assets/partners/cisco networking academy.png',
   },
   {
-    name: 'Game Development & VR Simulation Studio',
-    desc: 'Equipped with dedicated GPU rigs, virtual reality headsets (Meta Quest & HTC Vive), drawing tablets, and spatial audio monitors for game prototyping and immersive media.',
-    icon: 'palette',
-    capacity: '30 Workstations'
+    name: 'GOVESMART',
+    logo: '/assets/partners/GOVESMART.png',
   },
   {
-    name: 'Systems Virtualization & Cloud Lab',
-    desc: 'High-density multi-core server nodes running hypervisors, Docker containers, Kubernetes clusters, and Linux environments for full-stack deployment and database optimization.',
-    icon: 'laptop',
-    capacity: '40 Workstations'
+    name: 'Huawei ICT Academy',
+    logo: '/assets/partners/Huawei ICT Academy.png',
   },
   {
-    name: 'Hardware Diagnostics & Repair Suite',
-    desc: 'Specialized lab for microcomputer assembly, oscilloscope diagnostics, logic analyzers, peripheral soldering, motherboard troubleshooting, and network cabling fabrication.',
-    icon: 'code',
-    capacity: '25 Benches'
+    name: 'Lasortech',
+    logo: '/assets/partners/Lasortech.png',
   },
   {
-    name: 'Digital Library & Archival Informatics Hub',
-    desc: 'Integrated with Koha ILS, DSpace digital repository servers, automated RFID book tags, document flatbed scanners, and bibliographic search kiosks for BLIS training.',
-    icon: 'library',
-    capacity: '30 Terminals'
-  }
+    name: 'Mayad',
+    logo: '/assets/partners/Mayad.png',
+  },
+  {
+    name: 'Oracle Academy',
+    logo: '/assets/partners/Oracle Academy.png',
+  },
+  {
+    name: 'PSITE',
+    logo: '/assets/partners/PSITE.png',
+  },
+  {
+    name: 'Startup Project Ventures',
+    logo: '/assets/partners/Startup Project Ventures.png',
+  },
 ]
 
 const studentOrganizations = [
   {
     abbr: 'CSS',
-    name: 'CPU Computer Science Society',
-    focus: 'BSCS & BSIT Students',
+    name: 'Computer Science Society',
+    focus: 'BSCS Students',
     icon: '/assets/program-icons/computer-science.png',
-    desc: 'Empowers students through competitive coding contests, hackathons, open-source workshops, peer study circles, and industry tech tours.'
+    desc: 'The official student organization for Computer Science students, dedicated to algorithmic problem solving, software engineering, and peer technical activities.',
+  },
+  {
+    abbr: 'ITSO',
+    name: 'Information Technology Student Organization',
+    focus: 'BSIT Students',
+    icon: '/assets/program-icons/information-technology.png',
+    desc: 'The official student organization for Information Technology students, fostering technical competencies, IT seminars, and professional development.',
   },
   {
     abbr: 'MIDAS',
     name: 'Media & Interactive Design Arts Society',
-    focus: 'BSDMIA Students & Digital Creatives',
+    focus: 'BSDMIA Students',
     icon: '/assets/program-icons/midas.png',
-    desc: 'Cultivates artistic expression and interactive game creation through art exhibitions, 48-hour game jams, animation workshops, and community outreach like Project KULAY.'
+    desc: 'The official student organization for Digital Media and Interactive Arts students, fostering creative growth in digital animation, interactive design, and multimedia arts.',
   },
   {
     abbr: 'LISSO',
     name: 'Library & Information Science Student Organization',
-    focus: 'BLIS Students & Information Scholars',
+    focus: 'BLIS Students',
     icon: '/assets/program-icons/lisso.png',
-    desc: 'Champions literacy advocacy, digital curation seminars, community library book drives, and preparations for national librarian licensure conventions.'
-  }
+    desc: 'The official student organization for Library and Information Science students, promoting literacy advocacy, library sciences, and information stewardship.',
+  },
 ]
 </script>
 
@@ -202,14 +226,19 @@ const studentOrganizations = [
           </div>
           <h1 class="hero-page-title">About the College of Computer Studies</h1>
           <p class="hero-lead">
-            Combining Christian values, rigorous computing theory, and real-world technology application to develop ethical digital pioneers.
+            Combining Christian values, rigorous computing theory, and real-world technology
+            application to develop ethical digital pioneers.
           </p>
         </div>
 
         <div class="hero-logos-cluster">
-          <img src="/assets/logos/cpu-logo.png" alt="CPU Seal" class="hero-logo" width="90" height="90" />
-          <div class="hero-plus">+</div>
-          <img src="/assets/logos/ccs-logo.png" alt="CCS Seal" class="hero-logo" width="90" height="90" />
+          <img
+            src="/assets/logos/ccs-logo.png"
+            alt="CCS Seal"
+            class="hero-logo"
+            width="100"
+            height="100"
+          />
         </div>
       </div>
     </section>
@@ -227,15 +256,27 @@ const studentOrganizations = [
             />
 
             <p>
-              Central Philippine University was founded in 1905 through a grant from American philanthropist John D. Rockefeller and American Baptist missionaries. Rooted in the university motto <strong>Scientia et Fides</strong> (Science and Faith), CPU has long recognized technology as a vital instrument for human development and ethical service.
+              Central Philippine University was founded in 1905 through a grant from American
+              philanthropist John D. Rockefeller and American Baptist missionaries. Rooted in the
+              university motto <strong>Scientia et Fides</strong> (Science and Faith), CPU has long
+              recognized technology as a vital instrument for human development and ethical service.
             </p>
 
             <p>
-              The <strong>College of Computer Studies (CCS)</strong> was established to meet the surging demands of the regional and global knowledge economy. Over decades of dedicated growth, CCS evolved from early data processing courses into an accredited powerhouse offering specialized degrees in <strong>Information Technology</strong>, <strong>Computer Science</strong>, <strong>Digital Media and Interactive Arts</strong>, and <strong>Library and Information Science</strong>.
+              The <strong>College of Computer Studies (CCS)</strong> was established to meet the
+              surging demands of the regional and global knowledge economy. Over decades of
+              dedicated growth, CCS evolved from early data processing courses into an accredited
+              powerhouse offering specialized degrees in <strong>Information Technology</strong>,
+              <strong>Computer Science</strong>,
+              <strong>Digital Media and Interactive Arts</strong>, and
+              <strong>Library and Information Science</strong>.
             </p>
 
             <p>
-              Today, the college honors a long tradition of academic excellence, having achieved <strong>PAASCU Level I</strong> and <strong>Clean 5-Year Re-Accreditation</strong> milestones, <strong>PACUCOA Level III</strong> status for its computing programs, and full alignment with CHED CMO 25 s.2015 Outcomes-Based Education standards.
+              Today, the college honors a proud tradition of academic excellence, grounded in
+              documented historical quality milestones including PAASCU Level 1 accreditation visits
+              for computing programs, PACUCOA orientation for BLIS, and full alignment with CHED
+              Outcomes-Based Education standards across its degree offerings.
             </p>
 
             <div class="stats-ribbon">
@@ -265,7 +306,10 @@ const studentOrganizations = [
                 <span>CPU Institutional Quality Policy</span>
               </div>
               <p class="quote-statement">
-                "Central Philippine University is committed to provide holistic, exemplary Christian education for life (EXCEL) through relevant academic programs, spiritual growth, dynamic research, and sustainable community engagement to satisfy customer expectations and continually improve the quality management system."
+                "Central Philippine University is committed to provide holistic, exemplary Christian
+                education for life (EXCEL) through relevant academic programs, spiritual growth,
+                dynamic research, and sustainable community engagement to satisfy customer
+                expectations and continually improve the quality management system."
               </p>
               <div class="quote-meta">
                 <strong>Central Philippine University</strong>
@@ -291,36 +335,51 @@ const studentOrganizations = [
           <div class="vm-card card">
             <div class="vm-header">
               <div class="vm-icon-box">
-                <AppIcon name="star" :size="26" />
+                <AppIcon name="star" :size="32" />
               </div>
               <h3>CCS Vision</h3>
             </div>
             <p>
-              "The College of Computer Studies envisions itself to be a premier provider of computing and information education, producing graduates of high academic competence and Christian character, who will be responsive to the challenges of global and national development."
+              The College of Computer Studies is founded on the vision of academic excellence in
+              Information Technology Education and responsive to the needs of the total person and
+              the world.
             </p>
           </div>
 
           <div class="vm-card card">
             <div class="vm-header">
               <div class="vm-icon-box">
-                <AppIcon name="academic" :size="26" />
+                <AppIcon name="academic" :size="28" />
               </div>
               <h3>CCS Mission</h3>
             </div>
             <p>
-              "The College of Computer Studies is committed to providing quality education in computing and information technology in a Christian environment, producing competent professionals who are socially responsible and spiritually mature."
+              A College of the future with a mission to educate students with the Christian
+              principles and practices of computer studies, preparing them to advance studies,
+              careers in software development, computing systems technology, information management,
+              and for a lifetime learning.
             </p>
           </div>
 
           <div class="vm-card card">
             <div class="vm-header">
               <div class="vm-icon-box">
-                <AppIcon name="shield" :size="26" />
+                <AppIcon name="shield" :size="20" />
               </div>
-              <h3>Scientia et Fides</h3>
+              <h3>Quality Policy</h3>
             </div>
             <p>
-              <strong>Science and Faith:</strong> Grounded in the central university motto and core Christian values: <em>Faith, Character, Justice, Truth, and Excellence</em>. Our technologists balance algorithmic power with compassionate ethics and social responsibility.
+              To fulfill the mission and realize the vision of Central Philippine University, we
+              commit to consistently provide superior quality services by integrating Christian
+              values, academic excellence, highest level of professionalism, and quality
+              consideration in every aspect of our operations.
+            </p>
+
+            <p style="margin-top: 24px !important">
+              We maintain a quality management system that complies with international quality
+              management system that complies with international quality standards. We continually
+              improve to achieve global excellence that satisfies the expectations of the university
+              community, partner institutions, and the general public.
             </p>
           </div>
         </div>
@@ -389,27 +448,46 @@ const studentOrganizations = [
       </div>
     </section>
 
-    <!-- Computing Facilities & Laboratories -->
-    <section class="section-padding bg-white">
-      <div class="container">
-        <SectionHeading
-          badge="High-Tech Infrastructure"
-          title="State-of-the-Art Computer Laboratories"
-          subtitle="Hands-on learning is at the heart of our curriculum. Explore our specialized laboratories designed for industry readiness."
-          align="center"
-        />
+    <!-- Partners and Memberships (Linkages) Section -->
+    <section class="partners-section">
+      <!-- Header Banner: Amber to Emerald Gradient with SVG Wave -->
+      <div class="partners-banner">
+        <div class="container banner-inner">
+          <h2 class="partners-heading font-serif text-white">Partners and Memberships</h2>
+        </div>
+        <!-- Bottom SVG Curve/Wave for smooth transition to the white section below -->
+        <div class="banner-wave-wrap">
+          <svg
+            class="banner-wave-svg"
+            viewBox="0 0 1440 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M0,24 C240,64 480,72 720,44 C960,16 1200,48 1440,32 L1440,80 L0,80 Z"
+              fill="#ffffff"
+            />
+          </svg>
+        </div>
+      </div>
 
-        <div class="grid-3 facilities-grid">
-          <div v-for="(fac, index) in facilities" :key="index" class="facility-card card">
-            <div class="facility-icon-wrap">
-              <AppIcon :name="fac.icon" :size="26" />
-            </div>
-            <div class="facility-body">
-              <div class="facility-header-row">
-                <h3 class="facility-title">{{ fac.name }}</h3>
-                <span class="capacity-badge">{{ fac.capacity }}</span>
-              </div>
-              <p class="facility-desc">{{ fac.desc }}</p>
+      <!-- Logos Grid Container -->
+      <div class="partners-content bg-white">
+        <div class="container">
+          <div class="partners-grid flex flex-wrap justify-center items-center gap-8">
+            <div
+              v-for="partner in partners"
+              :key="partner.name"
+              class="partner-card"
+              :title="partner.name"
+            >
+              <img
+                :src="partner.logo"
+                :alt="`${partner.name} Logo`"
+                class="max-w-full h-20 object-contain hover:scale-105 transition-transform"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -422,14 +500,24 @@ const studentOrganizations = [
         <SectionHeading
           badge="Campus Life"
           title="Recognized Student Organizations"
-          subtitle="Get involved beyond the classroom through student societies that organize code camps, creative exhibitions, and hackathons."
+          subtitle="Get involved beyond the classroom through student societies that organize academic seminars, workshops, and peer collaboration."
           align="center"
         />
 
-        <div class="grid-3 orgs-grid">
+        <div class="orgs-grid">
           <div v-for="org in studentOrganizations" :key="org.abbr" class="org-card card">
             <div class="org-icon-row">
-              <img :src="org.icon" :alt="org.abbr" class="org-icon-img" width="56" height="56" />
+              <img
+                v-if="org.icon"
+                :src="org.icon"
+                :alt="org.abbr"
+                class="org-icon-img"
+                width="56"
+                height="56"
+              />
+              <div v-else class="org-icon-fallback" aria-label="Information Technology">
+                <span class="fallback-abbr">{{ org.abbr }}</span>
+              </div>
               <div class="org-meta">
                 <span class="badge badge-navy">{{ org.abbr }}</span>
                 <span class="org-focus">{{ org.focus }}</span>
@@ -670,63 +758,214 @@ const studentOrganizations = [
   line-height: 1.7;
 }
 
-/* Facilities */
-.facility-card {
-  padding: 2rem;
-  display: flex;
-  gap: 1.25rem;
-  border-left: 4px solid var(--cpu-navy);
+.quality-policy-card p + p {
+  margin-top: 1.25rem;
 }
 
-.facility-icon-wrap {
-  width: 52px;
-  height: 52px;
-  background-color: var(--cpu-navy-soft);
-  color: var(--cpu-navy);
-  border-radius: var(--radius-md);
+/* Partners & Memberships (Linkages) */
+.partners-section {
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.partners-banner {
+  position: relative;
+  background: linear-gradient(135deg, #d97706 0%, #f59e0b 40%, #10b981 100%);
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+
+.banner-inner {
+  position: relative;
+  z-index: 2;
+}
+
+.partners-heading {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, Cambria, 'Times New Roman', serif;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.banner-wave-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.banner-wave-svg {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+.partners-content {
+  background-color: #ffffff;
+  padding-top: 3.5rem;
+  padding-bottom: 5rem;
+}
+
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.partner-card {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #ffffff;
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: var(--radius-md, 12px);
+  padding: 1.25rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 33, 71, 0.05);
+  transition: all var(--transition-normal, 0.25s ease);
+  min-width: 200px;
+  max-width: 260px;
+  height: 120px;
+}
+
+.partner-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 8px 20px rgba(0, 33, 71, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Tailwind utility classes for logos & grid */
+.max-w-full {
+  max-width: 100%;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.object-contain {
+  object-fit: contain;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:scale-105:hover,
+.partner-card:hover .hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.gap-8 {
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .partners-banner {
+    padding-top: 3.5rem;
+    padding-bottom: 4.5rem;
+  }
+  .partners-heading {
+    font-size: 2rem;
+  }
+  .banner-wave-svg {
+    height: 40px;
+  }
+  .partners-content {
+    padding-top: 2rem;
+    padding-bottom: 3.5rem;
+  }
+  .partner-card {
+    min-width: 150px;
+    max-width: 180px;
+    height: 100px;
+    padding: 1rem 1.25rem;
+  }
+  .h-20 {
+    height: 3.75rem;
+  }
+}
+
+/* Orgs Grid */
+.orgs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .orgs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .orgs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.org-card {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.org-icon-fallback {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background: #002147;
+  color: #fbbf24;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
+  border: 2px solid #f59e0b;
+  box-shadow: var(--shadow-sm);
   flex-shrink: 0;
 }
 
-.facility-body {
-  flex: 1 1 auto;
-}
-
-.facility-header-row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.facility-title {
-  font-size: 1.1rem;
-  line-height: 1.35;
-}
-
-.capacity-badge {
-  font-size: 0.725rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background-color: var(--bg-subtle);
-  padding: 2px 8px;
-  border-radius: var(--radius-xs);
-  white-space: nowrap;
-}
-
-.facility-desc {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Orgs */
-.org-card {
-  padding: 2.25rem 2rem;
+.fallback-abbr {
+  display: inline-block;
+  line-height: 1;
 }
 
 .org-icon-row {
@@ -905,7 +1144,9 @@ const studentOrganizations = [
   border-radius: var(--radius-md);
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--border-light);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .milestone-card:hover {

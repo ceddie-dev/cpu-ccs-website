@@ -16,8 +16,7 @@ export const facultyData = [
     programs: ['BSCS', 'BSIT', 'BSDMIA', 'BLIS'],
     email: 'ccs@cpu.edu.ph',
     office: "Dean's Office, CCS Building, CPU",
-    consultationHours: 'Monday – Friday: 9:00 AM – 11:30 AM, 2:00 PM – 4:00 PM',
-    bio: 'Prof. Ma. Christina A. Quijano leads the College of Computer Studies with visionary leadership grounded in Christian values and academic excellence. Under her stewardship, CCS has maintained PACUCOA Level III accreditation, expanded industry partnerships, and fostered high-impact student research and technopreneurship.',
+    bio: 'Prof. Ma. Christina A. Quijano leads the College of Computer Studies with visionary leadership grounded in Christian values and academic excellence. Under her stewardship, CCS has advanced contemporary outcomes-based curriculum standards, expanded industry partnerships, and fostered high-impact student research and technopreneurship.',
     specializations: ['Curriculum Leadership', 'Software Engineering', 'Christian Tech Leadership', 'Higher Education Administration'],
     verified: true
   },
@@ -32,7 +31,6 @@ export const facultyData = [
     programs: ['BSIT'],
     email: 'rbalontong@cpu.edu.ph',
     office: 'Department Chairs Office, CCS 2nd Floor',
-    consultationHours: 'Tuesday & Thursday: 1:00 PM – 4:00 PM',
     bio: 'Oversees the academic and instructional operations of the Information Technology and Information Systems departments, guiding students through practical industry internships and emerging technology capstones.',
     specializations: ['IT Infrastructure Management', 'Systems Integration', 'Enterprise Systems', 'Technology Project Management'],
     verified: true,
@@ -49,7 +47,6 @@ export const facultyData = [
     programs: ['BSCS', 'BSDMIA'],
     email: 'mrparreno@cpu.edu.ph',
     office: 'CCS Faculty Room, Room 204',
-    consultationHours: 'Monday & Wednesday: 10:00 AM – 12:00 PM',
     bio: 'Leads the curriculum and student development initiatives for Computer Science and Digital Media & Interactive Arts, championing creative computing, game development, and algorithmic rigor.',
     specializations: ['Algorithmic Thinking', 'Game Development', 'Interactive Media', 'Graduate Computing Research'],
     verified: true
@@ -65,7 +62,6 @@ export const facultyData = [
     programs: ['BLIS'],
     email: 'acantel@cpu.edu.ph',
     office: 'BLIS Department Office, CCS Building',
-    consultationHours: 'Monday, Wednesday & Friday: 1:30 PM – 3:30 PM',
     bio: 'Experienced educator and licensed librarian steering the BLIS curriculum toward digital archiving, modern informatics, knowledge organization, and digital preservation.',
     specializations: ['Digital Archiving', 'Information Architecture', 'Library Automation Systems', 'Bibliographic Organization'],
     verified: true
@@ -81,7 +77,6 @@ export const facultyData = [
     programs: ['BSIT', 'BSCS'],
     email: 'lpajar@cpu.edu.ph',
     office: 'CCS Main Server Room & Lab Control Hub',
-    consultationHours: 'Tuesday & Friday: 2:00 PM – 5:00 PM',
     bio: 'Coordinates all specialized computer laboratories, virtualization environments, network switches, and hardware laboratories across the College of Computer Studies.',
     specializations: ['Network Infrastructure', 'Lab Virtualization', 'Hardware Architecture', 'Operating Systems Administration'],
     verified: true
@@ -97,7 +92,6 @@ export const facultyData = [
     programs: ['BSCS'],
     email: 'msapul@cpu.edu.ph',
     office: 'CCS Research & Innovation Room, Room 207',
-    consultationHours: 'Monday & Thursday: 1:00 PM – 3:30 PM',
     bio: 'Dr. Sapul heads machine learning and algorithmic research within the college, supervising undergraduate thesis projects and publishing in international computing proceedings.',
     specializations: ['Artificial Intelligence', 'Machine Learning', 'Computer Vision', 'Data Mining & Predictive Analytics'],
     verified: true
@@ -113,7 +107,6 @@ export const facultyData = [
     programs: ['BSCS'],
     email: 'pcambronero@cpu.edu.ph',
     office: 'CCS Faculty Room 202',
-    consultationHours: 'Wednesday & Friday: 9:00 AM – 11:30 AM',
     bio: 'Mentors computer science students in automata theory, discrete mathematics, software engineering, and competitive algorithmic problem solving.',
     specializations: ['Automata Theory', 'Data Structures & Algorithms', 'Compiler Design', 'System Architecture'],
     verified: true
@@ -129,7 +122,6 @@ export const facultyData = [
     programs: ['BSIT'],
     email: 'lpbeldia@cpu.edu.ph',
     office: 'CCS Faculty Room 203',
-    consultationHours: 'Tuesday & Thursday: 10:00 AM – 12:00 PM',
     bio: 'Specialist in modern web engineering, JavaScript/TypeScript ecosystems, mobile application development, and interactive database-driven web platforms.',
     specializations: ['Full-Stack Web Development', 'Mobile App Development', 'Relational Databases', 'Frontend Frameworks'],
     verified: true
@@ -145,7 +137,6 @@ export const facultyData = [
     programs: ['BSIT'],
     email: 'ldignadice@cpu.edu.ph',
     office: 'CCS Faculty Room 203',
-    consultationHours: 'Monday & Wednesday: 2:00 PM – 4:00 PM',
     bio: 'Inspires students in human-computer interaction, enterprise resource planning, business analytics, and technopreneurship.',
     specializations: ['Human-Computer Interaction (HCI)', 'IT Entrepreneurship', 'Enterprise Resource Planning', 'Business Process Modeling'],
     verified: true
@@ -161,7 +152,6 @@ export const facultyData = [
     programs: ['BSIT'],
     email: 'reregia@cpu.edu.ph',
     office: 'CCS Faculty Room 203',
-    consultationHours: 'Tuesday & Friday: 8:30 AM – 11:00 AM',
     bio: 'Specializes in computer networking, cybersecurity fundamentals, Linux administration, and network routing and switching protocols.',
     specializations: ['Computer Networking', 'Cybersecurity', 'Linux Systems Administration', 'Information Assurance'],
     verified: true
@@ -177,7 +167,6 @@ export const facultyData = [
     programs: ['BSCS', 'BSIT'],
     email: 'djardeleza@cpu.edu.ph',
     office: 'CCS Faculty Room 202',
-    consultationHours: 'Monday & Thursday: 10:30 AM – 12:30 PM',
     bio: 'Senior educator guiding students in algorithmic logic, software design patterns, backend engineering, and capstone research methods.',
     specializations: ['Object-Oriented Design', 'Software Engineering', 'Data Analytics', 'Capstone Advising'],
     verified: true
@@ -193,7 +182,6 @@ export const facultyData = [
     programs: ['BSIT'],
     email: 'amontano@cpu.edu.ph',
     office: 'CCS Faculty Room 203',
-    consultationHours: 'Wednesday & Friday: 1:30 PM – 4:00 PM',
     bio: 'Focuses on systems analysis, database design, enterprise network infrastructure, and client-server architectures.',
     specializations: ['Systems Analysis & Design', 'Database Administration', 'Network Routing', 'Client-Server Systems'],
     verified: true
@@ -209,11 +197,10 @@ export const facultyData = [
     programs: ['BSIT', 'BSCS'],
     email: 'rojacastro@cpu.edu.ph',
     office: 'CCS Faculty Room 202',
-    consultationHours: 'Tuesday & Thursday: 2:00 PM – 4:30 PM',
     bio: 'Guides students through intelligent algorithms, application programming interfaces, modern software lifecycles, and database engineering.',
     specializations: ['Database Management', 'Software Life Cycle', 'Applied Computing', 'Intelligent Systems'],
     verified: true,
-    verificationNote: 'Signed as OIC-Department Head, BSIT on the official AY 2024–2025 Curriculum Checklist; listed as Faculty Member on ccs.cpu.edu.ph.'
+    verificationNote: 'Listed as OIC-Department Head on the typed endorsement line, BSIT on the official AY 2024–2025 Curriculum Checklist; listed as Faculty Member on ccs.cpu.edu.ph.'
   },
   {
     id: 'ador-chriselda',
@@ -226,7 +213,6 @@ export const facultyData = [
     programs: ['BSIT', 'BSCS', 'BSDMIA', 'BLIS'],
     email: 'cador@cpu.edu.ph',
     office: 'CCS Guidance Office, Ground Floor',
-    consultationHours: 'Monday – Friday: 8:00 AM – 12:00 PM, 1:00 PM – 5:00 PM',
     bio: 'Provides comprehensive counseling, mental health advocacy, career path guidance, and personal development support for all computer studies students.',
     specializations: ['Student Mental Health', 'Academic Counseling', 'Career Path Coaching', 'Student Well-being'],
     verified: true
@@ -242,7 +228,6 @@ export const facultyData = [
     programs: ['BSIT', 'BSCS', 'BSDMIA', 'BLIS'],
     email: 'ccastano@cpu.edu.ph',
     office: "Dean's Office Reception, CCS Building",
-    consultationHours: 'Monday – Friday: 8:00 AM – 12:00 PM, 1:00 PM – 5:00 PM',
     bio: 'Coordinates day-to-day administrative affairs, student enrollment forms, faculty scheduling, official endorsements, and college records.',
     specializations: ['Office Administration', 'Academic Records', 'Student Assistance', 'Logistics Management'],
     verified: true
@@ -258,7 +243,6 @@ export const facultyData = [
     programs: ['BLIS'],
     email: 'drivera@cpu.edu.ph',
     office: 'Henry Luce III Library / CCS Liaison Desk',
-    consultationHours: 'Monday – Friday: 8:30 AM – 4:30 PM',
     bio: 'Connects CCS students with academic journal databases, e-resources, thesis archives, and modern reference systems at the CPU Henry Luce III Library.',
     specializations: ['Digital Repositories', 'Academic Bibliographies', 'Library Research Assistance', 'Information Literacy'],
     verified: true
@@ -274,7 +258,6 @@ export const facultyData = [
     programs: ['BSIT', 'BSCS', 'BSDMIA', 'BLIS'],
     email: 'ataasan@cpu.edu.ph',
     office: 'Hardware Maintenance Room, CCS 1st Floor',
-    consultationHours: 'Monday – Friday: 7:30 AM – 5:00 PM',
     bio: 'Maintains computer workstations, network cabling, operating system images, audio-visual gear, and lab peripherals across all CCS laboratories.',
     specializations: ['Hardware Diagnostics', 'OS Deployment & Ghosting', 'Peripheral Troubleshooting', 'Lab Networking'],
     verified: true

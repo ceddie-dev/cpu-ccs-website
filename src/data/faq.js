@@ -9,12 +9,12 @@ export const faqData = [
     answer: 'Incoming freshmen must present their Form 138 (Grade 12 Senior High School Report Card), Certificate of Good Moral Character, PSA-authenticated Birth Certificate, and qualify in the Central Philippine University College Placement Examination. Graduates from any SHS academic strand may apply, with bridging modules available for STEM fundamentals where appropriate.'
   },
   {
-    question: 'Are the CCS degree programs accredited by national accrediting bodies?',
-    answer: 'Yes! The Bachelor of Science in Information Technology (BSIT) and Bachelor of Science in Computer Science (BSCS) programs hold Level III Re-Accredited status from the Philippine Association of Colleges and Universities Commission on Accreditation (PACUCOA). Our Bachelor of Library and Information Science (BLIS) and Bachelor of Science in Digital Media and Interactive Arts (BSDMIA) are fully recognized and comply with CHED Policies, Standards, and Guidelines (PSGs).'
+    question: 'Are the CCS degree programs recognized and accredited?',
+    answer: 'Yes. All degree programs offered by the CPU College of Computer Studies are fully recognized by the Commission on Higher Education (CHED) and comply with CHED Memorandum Orders (CMO 25, s. 2015 and CMO 24, s. 2015). The computing programs have a documented history of quality assurance, including PAASCU Level 1 accreditation milestones and PACUCOA orientation.'
   },
   {
     question: 'What specialized laboratory facilities are available for computing students?',
-    answer: 'The CPU College of Computer Studies houses dedicated computing facilities including the Apple Macintosh Multimedia Laboratory, Network & Systems Simulation Lab, Cisco Networking Lab, Game Development & VR Studio, General Computing Workstations, and a dedicated Hardware Maintenance and Diagnostics Room.'
+    answer: 'The CPU College of Computer Studies houses dedicated computing facilities including the Apple Macintosh Multimedia Laboratory, Cisco Networking & Security Lab, Systems Virtualization & Cloud Lab, Game Development & VR Simulation Studio, Hardware Diagnostics & Repair Suite, and Digital Library & Archival Informatics Hub.'
   },
   {
     question: 'Can students take the PRC Board Licensure Examination after graduating from BLIS?',
@@ -26,7 +26,7 @@ export const faqData = [
   },
   {
     question: 'What student organizations can CCS students join?',
-    answer: 'CCS students actively participate in three prominent recognized student organizations: the CPU Computer Science Society (CSS) for BSCS and BSIT students, the Media & Interactive Design Arts Society (MIDAS) for BSDMIA creatives, and the Library & Information Science Student Organization (LISSO) for BLIS scholars.'
+    answer: 'CCS students participate in four recognized student organizations: the Computer Science Society (CSS) for BSCS students, the Information Technology Student Organization (ITSO) for BSIT students, the Media & Interactive Design Arts Society (MIDAS) for BSDMIA students, and the Library & Information Science Student Organization (LISSO) for BLIS students.'
   }
 ]
 

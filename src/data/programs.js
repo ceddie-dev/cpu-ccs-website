@@ -1,7 +1,7 @@
 // ==========================================================================
 // Central Philippine University - College of Computer Studies (CCS)
 // Academic Programs Official Information & Curriculum Data
-// In compliance with CHED CMO 25, Series of 2015 & PACUCOA Standards
+// In compliance with CHED CMO 25, Series of 2015 & CMO 24, Series of 2015
 // ==========================================================================
 
 export const programsData = {
@@ -13,11 +13,11 @@ export const programsData = {
     icon: '/assets/program-icons/information-technology.png',
     degreeType: 'Undergraduate Degree',
     duration: '4 Years (8 Semesters)',
-    accreditation: 'PACUCOA Level III Accredited',
+    accreditation: 'CHED Recognized',
     studentOrg: {
-      name: 'CPU Computer Science & IT Society',
-      abbr: 'CSS',
-      description: 'The premier student organization empowering IT and CS students through code camps, tech fests, and hackathons.'
+      name: 'Information Technology Student Organization',
+      abbr: 'ITSO',
+      description: 'The official student organization for Information Technology students at CPU, fostering technical competencies, IT seminars, and professional development.'
     },
     overview: 'The Bachelor of Science in Information Technology (BSIT) program at Central Philippine University prepares students to be adept IT professionals knowledgeable in hardware and software technologies. The program emphasizes the planning, installing, customizing, operating, managing, administering, and maintaining of information technology infrastructure to meet the operational demands of enterprises, government institutions, and global organizations.',
     missionAlignment: 'Rooted in Central Philippine University\'s commitment to Exemplary Christian Education for Life (EXCEL), the BSIT curriculum combines technical mastery with ethical, socially responsible computing.',
@@ -58,48 +58,47 @@ export const programsData = {
         year: 'First Year',
         focus: 'Foundations of Computing & Programming Logic',
         courses: [
-          'Introduction to Computing & Digital Technologies',
-          'Computer Programming 1 (Structured Programming)',
-          'Computer Programming 2 (Object-Oriented Programming)',
-          'Discrete Structures in Computing',
-          'Human-Computer Interaction (HCI)',
-          'Christian Ethics & Character Formation'
+          'CCS 1001 - Introduction to Computing',
+          'CCS 1400 - Fundamentals of Programming',
+          'CCS 1500 - Intermediate Programming',
+          'CCS 1301 - Data Structures and Algorithms',
+          'GEMath 1 - Mathematics in the Modern World',
+          'CETech 1 - Living in the IT Era'
         ]
       },
       {
         year: 'Second Year',
-        focus: 'Data Structures, Networking & Web Engineering',
+        focus: 'Database Systems, Networking & Platform Tech',
         courses: [
-          'Data Structures and Algorithms',
-          'Networking 1 (Fundamentals & Network Architecture)',
-          'Networking 2 (Advanced Routing & Switching)',
-          'Database Management Systems 1 & 2',
-          'Web Systems and Technologies 1 (Client-Side Computing)',
-          'Operating Systems Configuration & Scripting'
+          'CCS 2100 - Fundamentals of Database Design',
+          'CCS 2110 - Application Development and Emerging Technologies',
+          'CCS 2401 - Network Engineering I: Introduction to Networks',
+          'CCS 2501 - Systems Analysis and Design',
+          'CCS 2601 - Programming with Databases',
+          'IT 2110 - Platform Technologies'
         ]
       },
       {
         year: 'Third Year',
-        focus: 'Enterprise Systems, Security & Cloud Architecture',
+        focus: 'Network Engineering, Security & Thesis Research',
         courses: [
-          'Information Assurance and Cybersecurity',
-          'Systems Integration and Architecture',
-          'Mobile Applications Engineering',
-          'Web Systems and Technologies 2 (Full-Stack & APIs)',
-          'IT Capstone Project 1 (Research & Design Phase)',
-          'Cloud Computing and Virtualization'
+          'CCS 3100 - Methods of Research in IT',
+          'CCS 3020 - Information Assurance and Security I',
+          'CCS 3030 - Web Systems and Technologies',
+          'IT 3121 - Network Engineering II: Switching, Routing, and Wireless Essentials',
+          'IT 3220 - System Integration and Architecture',
+          'CSS 3600 - CCS Thesis I'
         ]
       },
       {
         year: 'Fourth Year',
-        focus: 'Capstone Deployment, Ethics & Industry Practicum',
+        focus: 'Thesis Completion, Professional Electives & 600-Hour OJT',
         courses: [
-          'IT Capstone Project 2 (Implementation & Defense)',
-          'Systems Administration and Maintenance',
-          'Social and Professional Issues in Computing',
-          'IT Technopreneurship & Business Planning',
-          'Supervised Industry Internship / Practicum (500+ Hours)',
-          'Emerging Trends in Artificial Intelligence & IoT'
+          'CCS 4100 - CCS Thesis II',
+          'CCS 4300 - Social Issues and Professional Practices',
+          'IT 4120 - Advanced Database Systems',
+          'CCS 4201 - On-the-Job Training (600 hours)',
+          'Elective Tracks: Database Administration (CCSPE 1100–1400) or Internet of Things (ITPE 1100–1400)'
         ]
       }
     ],
@@ -131,11 +130,11 @@ export const programsData = {
     icon: '/assets/program-icons/computer-science.png',
     degreeType: 'Undergraduate Degree',
     duration: '4 Years (8 Semesters)',
-    accreditation: 'PACUCOA Level III Accredited',
+    accreditation: 'CHED Recognized',
     studentOrg: {
-      name: 'CPU Computer Science Society',
+      name: 'Computer Science Society',
       abbr: 'CSS',
-      description: 'Fosters competitive coding, algorithmic study groups, hackathon teams, and international coding competitions.'
+      description: 'The official student organization for Computer Science students at CPU, dedicated to algorithmic problem solving, software engineering, and peer technical activities.'
     },
     overview: 'The Bachelor of Science in Computer Science (BSCS) program at Central Philippine University focuses on the theoretical foundations of computing, advanced algorithmic analysis, artificial intelligence, and cutting-edge software engineering. Students learn to invent new computational techniques, design algorithmically complex systems, and solve mathematical and computational challenges that drive modern industry breakthroughs.',
     missionAlignment: 'Integrating Christian virtues with rigorous scientific inquiry, CPU BSCS instills critical thinking, intellectual honesty, and transformative software craftsmanship that benefits society.',
@@ -174,50 +173,49 @@ export const programsData = {
     curriculumHighlights: [
       {
         year: 'First Year',
-        focus: 'Computational Foundations & Discrete Mathematics',
+        focus: 'Foundations of Computing & Discrete Mathematics',
         courses: [
-          'Introduction to Computer Science & Logic',
-          'Computer Programming 1 & 2 (C++ & Python)',
-          'Discrete Mathematics and Graph Theory',
-          'Calculus for Computing 1 & 2',
-          'Computer Organization and Architecture',
-          'Christian Worldview and Ethics'
+          'CCS 1001 - Introduction to Computing',
+          'CCS 1400 - Fundamentals of Programming',
+          'CCS 1500 - Intermediate Programming',
+          'CCS 1301 - Data Structures and Algorithms',
+          'GEMath 1 - Mathematics in the Modern World',
+          'CETech 1 - Living in the IT Era'
         ]
       },
       {
         year: 'Second Year',
-        focus: 'Data Structures, Algorithms & Theory of Computation',
+        focus: 'Discrete Structures, Architecture & Logic Design',
         courses: [
-          'Design and Analysis of Algorithms',
-          'Data Structures & Advanced Sorting Models',
-          'Automata Theory and Formal Languages',
-          'Object-Oriented Software Design Patterns',
-          'Linear Algebra and Differential Equations for Computing',
-          'Probability and Statistics for Computer Science'
+          'CCS 2100 - Fundamentals of Database Design',
+          'CCS 2110 - Application Development and Emerging Technologies',
+          'CS 2111 - Structure of Programming Languages',
+          'CCS 2300 - Logic Design',
+          'CCS 2401 - Network Engineering I: Introduction to Networks',
+          'CS 2120 & 2210 - Discrete Structures I & II'
         ]
       },
       {
         year: 'Third Year',
-        focus: 'Artificial Intelligence, Operating Systems & Compiler Design',
+        focus: 'Algorithms, Software Engineering & Thesis Research',
         courses: [
-          'Artificial Intelligence & Intelligent Agents',
-          'Operating Systems Principles & Concurrency',
-          'Compiler Construction & Language Processors',
-          'Software Engineering 1 & 2',
-          'Machine Learning and Pattern Recognition',
-          'CS Thesis 1 (Research Proposal & Defense)'
+          'CCS 3002 - Computer Organization & Assembly Language',
+          'CCS 3020 - Information Assurance and Security I',
+          'CCS 3031 - Web Systems and Technologies',
+          'CS 3120 - Algorithms and Complexities',
+          'CCS 3300 - Software Engineering',
+          'CCS 3600 - CCS Thesis I'
         ]
       },
       {
         year: 'Fourth Year',
-        focus: 'Thesis Defense, Deep Learning & Industry Research',
+        focus: 'Artificial Intelligence, Thesis Completion & 600-Hour OJT',
         courses: [
-          'CS Thesis 2 (Full Prototype, Evaluation & Publication)',
-          'Computer Vision & Natural Language Processing',
-          'Distributed Systems and Parallel Computing',
-          'Social Issues & Professional Ethics in Computing',
-          'Practicum / Industry Research Internship (500 Hours)',
-          'Advanced Topics in Quantum & Cognitive Computing'
+          'CCS 4100 - CCS Thesis II',
+          'CS 4110 - Artificial Intelligence',
+          'CCS 4300 - Social Issues and Professional Practices',
+          'CCS 4201 - On-the-Job Training (600 hours)',
+          'Specialization Track Electives: Software Development (CSPE 4100/4200/4300), Data Science (CSPE 3101/3300/3400), or Cybersecurity (CSPE 5100/5200/5300)'
         ]
       }
     ],
@@ -247,11 +245,11 @@ export const programsData = {
     icon: '/assets/program-icons/midas.png',
     degreeType: 'Undergraduate Degree',
     duration: '4 Years (8 Semesters)',
-    accreditation: 'Recognized by CHED & Industry Aligned',
+    accreditation: 'CHED Recognized',
     studentOrg: {
       name: 'Media & Interactive Design Arts Society',
       abbr: 'MIDAS',
-      description: 'The creative hub for animators, illustrators, game developers, visual artists, and interactive media designers.'
+      description: 'The official student organization for Digital Media and Interactive Arts students at CPU, fostering creative growth in digital animation, interactive design, and multimedia arts.'
     },
     overview: 'Launched by the CPU College of Computer Studies in 2014, the Bachelor of Science in Digital Media and Interactive Arts (BSDMIA) program blends creative visual arts, design psychology, and technical software engineering. Students gain mastery of industry-standard tools and workflows in 2D/3D animation, 3D character modeling, video game production, virtual reality, cinematography, and immersive interactive installations.',
     missionAlignment: 'In harmony with CPU’s Christian philosophy, BSDMIA empowers students to produce uplifting, positive, and culturally enriching media content that elevates the human spirit and engages audiences ethically.',
@@ -292,48 +290,46 @@ export const programsData = {
         year: 'First Year',
         focus: 'Visual Arts Foundations & Creative Technology',
         courses: [
-          'Drawing Fundamentals and Human Anatomy',
-          'Color Theory and Visual Composition',
-          'Digital Illustration and Vector Graphics',
-          'Introduction to Interactive Media Programming',
-          'History of Animation and Digital Arts',
-          'Christian Values and Creative Stewardship'
+          'DMIA 1100 - Introduction to Digital Media',
+          'CCS 1400 - Fundamentals of Programming',
+          'CCS 1500 - Intermediate Programming',
+          'DMIA 1200 - Drawing for Animation',
+          'DMIA 1201 - Visual Storytelling & Screenplay',
+          'CETech 1 - Living in the IT Era'
         ]
       },
       {
         year: 'Second Year',
         focus: '2D/3D Animation, Modeling & Storytelling',
         courses: [
-          '2D Character Animation Principles',
-          '3D Modeling, Texturing, and UV Mapping',
-          'Screenwriting and Storyboarding for Digital Media',
-          'Interactive Web Design and Creative Coding',
-          'Digital Audio Production and Sound Design',
-          'Motion Graphics and Visual Aesthetics'
+          'DMIA 2101 - Graphic Design',
+          'DMIA 2102 - 3D Fundamentals',
+          'DMIA 2103 - User Interface Design',
+          'DMIA 2201 - Video Production',
+          'DMIA 2202 - Digital Audio Production',
+          'DMIA 2204 - 3D Character Modeling'
         ]
       },
       {
         year: 'Third Year',
-        focus: 'Game Engines, 3D Rigging & Virtual Reality',
+        focus: 'Specialized Tracks, Portfolio & Advanced Animation',
         courses: [
-          'Game Design Fundamentals & Scripting',
-          '3D Character Rigging and Performance Capture',
-          'Virtual Reality (VR) and Augmented Reality (AR)',
-          'Visual Effects (VFX) and Video Compositing',
-          'UI/UX Design for Interactive Applications',
-          'DMIA Capstone Project 1 (Concept & Pre-Production)'
+          'DMIA 3100 - Methods of Research',
+          'DMIA 3140 - 2D Animation',
+          'DMIA 3200 - Portfolio Development I',
+          'DMIA 3250 - 3D Animation',
+          'Creative Tracks: Digital Media and Broadcast Design (DMBD 3101/3105/3202/3204) or Visualization and Animation (DMVA 3204/3105a/3104/3205)'
         ]
       },
       {
         year: 'Fourth Year',
-        focus: 'Capstone Production, Portfolio & Studio Internship',
+        focus: 'Portfolio Exhibition, Media Law & 600-Hour OJT',
         courses: [
-          'DMIA Capstone Project 2 (Production, Playtesting & Exhibition)',
-          'Game Publishing and Monetization Strategies',
-          'Professional Portfolio Development & Demo Reel',
-          'Intellectual Property and Entertainment Law',
-          'Supervised Creative Studio Practicum (500 Hours)',
-          'Emerging Trends in Generative Media & Real-Time Rendering'
+          'DMIA 4100 - Portfolio Development II',
+          'DMIA 4102 - Digital Media Law with Professional Ethics',
+          'DMIA 4110 - Portfolio Preparation and Exhibit Design',
+          'CCS 4201 - On-the-Job Training (600 hours)',
+          'Digital Media Electives (DMIAFE 1100–1500)'
         ]
       }
     ],
@@ -347,8 +343,6 @@ export const programsData = {
     ],
     associatedFacultyIds: [
       'parreno-marjee-rose',
-      'beldia-leo-paulo',
-      'dignadice-lesley-joy',
       'pajar-lennon'
     ]
   },
@@ -361,11 +355,11 @@ export const programsData = {
     icon: '/assets/program-icons/lisso.png',
     degreeType: 'Undergraduate Degree',
     duration: '4 Years (8 Semesters)',
-    accreditation: 'PACUCOA Accredited / PRC Licensure Aligned',
+    accreditation: 'CHED Recognized',
     studentOrg: {
-      name: 'Library & Information Science Student Org',
+      name: 'Library & Information Science Student Organization',
       abbr: 'LISSO',
-      description: 'Championing literacy advocacy, digital curation workshops, community book drives, and national library congresses.'
+      description: 'The official student organization for Library and Information Science students at CPU, promoting literacy advocacy, library sciences, and information stewardship.'
     },
     overview: 'The Bachelor of Library and Information Science (BLIS) program under the College of Computer Studies at Central Philippine University prepares students to become modern information professionals, data curators, and knowledge managers. The curriculum bridges traditional librarianship with cutting-edge digital technologies, equipping graduates to organize, preserve, retrieve, and disseminate information across physical collections, electronic databases, and cloud-based digital repositories.',
     missionAlignment: 'Rooted in CPU’s heritage of Christian service and truth, the BLIS program nurtures ethical guardians of knowledge who defend intellectual freedom, preserve cultural memory, and foster lifelong learning in communities.',
@@ -406,48 +400,46 @@ export const programsData = {
         year: 'First Year',
         focus: 'Foundations of Library & Information Science',
         courses: [
-          'Introduction to Library and Information Science',
-          'History of Libraries, Books, and Printing',
-          'Information Technology Fundamentals in Libraries',
-          'Information Resources and Reference Services',
-          'Filipino & English Scholarly Communication',
-          'Christian Morals, Service, and Values'
+          'LIS 1101 - Introduction to Library and Information Science',
+          'CCS 1400 - Fundamentals of Programming',
+          'CCS 1500 - Intermediate Programming',
+          'LIS 1201 - Collection Management',
+          'GEMath 1 - Mathematics in the Modern World',
+          'CETech 1 - Living in the IT Era'
         ]
       },
       {
         year: 'Second Year',
-        focus: 'Cataloging, Classification & Indexing Systems',
+        focus: 'Cataloging, Classification & Database Design',
         courses: [
-          'Organization of Information Resources 1 (Descriptive / RDA)',
-          'Organization of Information Resources 2 (Subject Analysis & LCC/DDC)',
-          'Abstracting and Indexing Principles',
-          'Collection Development and Resource Management',
-          'Database Design and Information Systems',
-          'Library Information Architecture'
+          'LIS 2101 - Information Resources and Services I',
+          'LIS 2102 - Organization of Information Resources I',
+          'LIS 2201 - Information Resources and Services II',
+          'LIS 2202 - Organization of Information Resources II',
+          'CCS 2100 - Fundamentals of Database Design',
+          'CESocSci 4 - The Entrepreneurial Mind'
         ]
       },
       {
         year: 'Third Year',
-        focus: 'Digital Libraries, Automation & Archives Management',
+        focus: 'Web Systems, Research Methods & Thesis Writing',
         courses: [
-          'Library Automation Systems and Open Source Tools (Koha)',
-          'Digital Libraries and Repository Management (DSpace)',
-          'Archives Management and Historical Document Preservation',
-          'Special, Law, and Medical Library Administration',
-          'Research Methods in Library and Information Science',
-          'BLIS Thesis / Research Project 1'
+          'CCS 3030 - Web Systems and Technologies',
+          'LIS 3102 - Management of Libraries and Information Centers',
+          'LIS 3107 - Indexing and Abstracting',
+          'LIS 3104 - Research Methods in Library and Information Science',
+          'LIS 3201 - Information Literacy',
+          'LIS 3202 - Thesis/Research Writing'
         ]
       },
       {
         year: 'Fourth Year',
-        focus: 'Licensure Preparation, Thesis Defense & Practicum',
+        focus: 'Integrated Review & 400-Hour Library Practicum',
         courses: [
-          'BLIS Thesis 2 (Research Defense & Dissemination)',
-          'Information Law, Copyright, and Ethics of Information',
-          'Intensive Review for the PRC Librarian Licensure Examination',
-          'Knowledge Management and Corporate Informatics',
-          'Supervised Library & Archives Practicum (500 Hours)',
-          'Emerging Trends in AI and Digital Humanities'
+          'LIS 4101 - Library Integrated Review (6 Units)',
+          'SpT 4102 - Trends in Library and Information Science',
+          'LPr 4201 - Library Practice I (200 hrs.)',
+          'LPr 4202 - Library Practice II (200 hrs.)'
         ]
       }
     ],
@@ -461,8 +453,7 @@ export const programsData = {
     ],
     associatedFacultyIds: [
       'cantel-ana-mae',
-      'rivera-donna-may',
-      'dignadice-lesley-joy'
+      'rivera-donna-may'
     ]
   }
 }

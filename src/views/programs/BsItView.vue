@@ -113,9 +113,9 @@ const associatedFaculty = computed(() => {
             <div class="accreditation-callout">
               <AppIcon name="award" :size="24" class="callout-icon" />
               <div>
-                <h4>PACUCOA Level III Re-Accreditation</h4>
+                <h4>Historical PAASCU Level 1 Re-Accreditation Milestone</h4>
                 <p>
-                  This program has undergone rigorous institutional assessment affirming exceptional instructional standards, cutting-edge computing laboratories, high employability rates, and continuous industry linkage.
+                  This program has undergone rigorous institutional assessment affirming high instructional standards, modern computing laboratories, and continuous alignment with CHED CMO 25 s.2015.
                 </p>
               </div>
             </div>
@@ -274,15 +274,15 @@ const associatedFaculty = computed(() => {
           </div>
           <div class="spec-row">
             <span>Practicum / Internship:</span>
-            <strong>500+ Hours (Fourth Year)</strong>
+            <strong>600 Hours (CCS 4201 - On-the-Job Training)</strong>
           </div>
           <div class="spec-row">
-            <span>Capstone Requirement:</span>
-            <strong>2-Semester Applied IT Project</strong>
+            <span>Capstone / Thesis:</span>
+            <strong>2-Semester CCS Thesis Sequence (CSS 3600 & CCS 4100)</strong>
           </div>
           <div class="spec-row">
             <span>Department:</span>
-            <strong>Information Technology</strong>
+            <strong>Department of Information Technology</strong>
           </div>
         </div>
 
@@ -542,7 +542,8 @@ const associatedFaculty = computed(() => {
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 800;
-  color: rgba(0, 33, 71, 0.15);
+  color: var(--cpu-gold);
+  opacity: 1;
   margin-bottom: 0.75rem;
 }
 

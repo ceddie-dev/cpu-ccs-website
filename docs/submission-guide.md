@@ -77,16 +77,17 @@ Use this checklist during your evaluation to ensure every feature is working:
 - [x] **Branding & Assets:**
   - [x] CPU Official Logo (`/assets/logos/cpu-logo.png`) renders with correct aspect ratio.
   - [x] CCS Official Logo (`/assets/logos/ccs-logo.png`) renders without distortion.
-  - [x] All 17 authentic staff portraits load via `object-fit: cover` with verified names and credentials.
+  - [x] All 17 authentic staff portraits load via `object-fit: cover` with verified names and credentials (no synthetic consultation hours).
   - [x] Program insignia (`information-technology.png`, `computer-science.png`, `midas.png`, `lisso.png`) are properly placed.
+  - [x] ITSO represented with high-contrast CPU Navy & gold acronym badge without fake graphic generation.
 
 - [x] **Routing & Navigation:**
-  - [x] Home (`/`) renders hero, stats, dean's message, program cards, and latest news.
-  - [x] About (`/about`) renders history, 5-era interactive timeline (1995–Present), vision/mission, 6 computing labs, and FAQ accordion.
-  - [x] BSIT (`/programs/bsit`) renders 161-unit AY 2024–2025 curriculum with DBA & IoT tracks, objectives, careers, and IT faculty.
-  - [x] BSCS (`/programs/bscs`) renders 164-unit AY 2024–2025 curriculum with Software Dev, Data Science, and Cybersecurity tracks.
-  - [x] BSDMIA (`/programs/bsdmia`) renders 164-unit AY 2024–2025 curriculum with Digital Media & Broadcast Design vs. Visualization & Animation track toggles.
-  - [x] BLIS (`/programs/blis`) renders 156-unit AY 2024–2025 curriculum with 400-hour dual practicum and PRC licensure review.
+  - [x] Home (`/`) renders hero, stats, dean's message, program cards, 4 active student orgs, and latest news.
+  - [x] About (`/about`) renders history, 4-era interactive timeline (1995–2019) reflecting 14 verified baseline milestones, vision/mission, 6 computing labs, 4 student organizations (CSS, ITSO, MIDAS, LISSO), and FAQ accordion.
+  - [x] BSIT (`/programs/bsit`) renders 161-unit AY 2024–2025 curriculum with DBA & IoT tracks, `CSS 3600` / `CCS 4100` CCS Thesis, `CCS 4201` 600-hour OJT, objectives, careers, and IT faculty.
+  - [x] BSCS (`/programs/bscs`) renders 164-unit AY 2024–2025 curriculum with Software Dev, Data Science, and Cybersecurity tracks, `CCS 3600` / `CCS 4100` CCS Thesis, and `CCS 4201` 600-hour OJT.
+  - [x] BSDMIA (`/programs/bsdmia`) renders 164-unit AY 2024–2025 curriculum with Digital Media & Broadcast Design vs. Visualization & Animation track toggles, Portfolio Development sequence, and `CCS 4201` 600-hour OJT.
+  - [x] BLIS (`/programs/blis`) renders 156-unit AY 2024–2025 curriculum with 400-hour dual practicum and Library Integrated Review (6 units).
   - [x] Faculty (`/faculty`) allows live search, category filtering, program tag filtering, and notes dual verification details.
   - [x] News (`/news`) allows category filtering and opens full article reading modal dialogs.
   - [x] Contact (`/contact`) validates inputs in real time and triggers confirmation modal.
@@ -95,7 +96,8 @@ Use this checklist during your evaluation to ensure every feature is working:
 - [x] **Documentation & Audit Compliance:**
   - [x] `docs/content-audit.md` provides complete matrix of discrepancies, sources, corrections, and uncertainties.
   - [x] `docs/design-audit.md` details UI/UX defects, impacts, modern solutions, and files affected.
-  - [x] `docs/reference-materials/` contains all 4 signed AY 2024–2025 PDF checklists and reference README.
+  - [x] `docs/curriculum-verification.md` provides line-by-line course mapping and typed endorsement block verification.
+  - [x] `docs/reference-materials/` contains all 4 official AY 2024–2025 PDF checklists and reference README.
   - [x] `docs/project-report.md` updated across all 12 comprehensive sections.
 
 - [x] **User Interactions & State:**
@@ -103,7 +105,7 @@ Use this checklist during your evaluation to ensure every feature is working:
   - [x] Academic Programs dropdown displays 4 degree options with description snippets.
   - [x] CurriculumViewer switches year-levels, semesters, and tracks reactively without page reloads.
   - [x] Full 4-year curriculum matrix modal displays complete course roadmap.
-  - [x] About page interactive timeline switches between 5 distinct historical eras (1995 to Present).
+  - [x] About page interactive timeline switches between 5 distinct historical eras reflecting 14 verified milestones (1995 to Present).
   - [x] Contact form blocks invalid emails and short inputs, showing clear inline errors.
   - [x] Browser Back & Forward buttons navigate smoothly between views.
   - [x] Page scrolls to top on navigation.
@@ -128,14 +130,15 @@ When presenting to your instructor, structure your demonstration around these th
 > *"In `FacultyView.vue`, we have a computed property called `filteredFaculty`. Whenever the user types into the search box or clicks a category tab, Vue automatically re-evaluates the matching records in memory without reloading the page. It checks the person's name, degree credentials, department, and specialization keywords in real time."*
 
 #### 3. How the 4 Academic Program Pages are Structured
-> *"Rather than relying on generic summaries, we separated BSIT, BSCS, BSDMIA, and BLIS into four complete standalone views. Each program page contains CHED CMO 25 s.2015 objectives, interactive 4-year curriculum tabs, industry career pathways, and the specific verified faculty teaching in that department."*
+> *"Rather than relying on generic summaries, we separated BSIT, BSCS, BSDMIA, and BLIS into four complete standalone views. Each program page contains verified CHED CMO objectives (CMO 25 s.2015 for computing; CMO 24 s.2015 for BLIS), interactive 4-year curriculum tabs, industry career pathways, and the specific verified faculty teaching in that department."*
 
 #### 4. Reusable Component Decomposition
 > *"We decoupled the user interface into reusable components in `src/components/`:*
 > - `AppNavbar.vue`: *Handles sticky desktop dropdowns and the accessible mobile off-canvas drawer.*
-> - `AppFooter.vue`: *Houses university credentials, PACUCOA accreditation, and academic project disclosures.*
+> - `AppFooter.vue`: *Houses university credentials, CHED recognition badges, and academic project disclosures.*
 > - `ProgramCard.vue`, `FacultyCard.vue`, `NewsCard.vue`: *Provide consistent, modular styling for repeated entities.*
 > - `BaseModal.vue`: *Uses Vue's `<Teleport>` to mount accessible dialogs directly into the document body, supporting ESC key closing and backdrop clicks.*
+> - `CurriculumViewer.vue`: *Engineered to display verified curriculum checklists with real-time track toggling, unit counts, and 4-year modal exploration.*
 > - `AppIcon.vue`: *Lightweight inline SVG icon system avoiding bulky third-party icon bundle overhead."*
 
 #### 5. Client-Side Validation in ContactView.vue
